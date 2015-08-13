@@ -1,21 +1,22 @@
-\version "2.19.17"
+\version "2.18.2"
 
 \header {
   title = "16 Studies for the Guitar"
   composer = "Mauro Giuliani"
-  opus = "Op. 59 No. 1"
+  opus = "Op. 59 No. 16"
   style = "Romantic"
   source = "A Messionnier, Boulevard Montmartre No 23."
   % Statens musikbibliotek - The Music Library of Sweden
-  % Boije 142
+  % Boije 142, http://urn.kb.se/resolve?urn=urn:nbn:se:statensmusikverk-4171
   date = "1822"
   mutopiacomposer = "GiulianiM"
   mutopiainstrument = "Guitar"
+  mutopiatitle = "16 Studies for the Guitar: No. 16"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
 
- footer = "Mutopia-2015/08/12-2003"
+ footer = "Mutopia-2015/08/12-2040"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
@@ -29,91 +30,128 @@
   bottom-margin = #10
 }
 
-mbreak = {} % { \break }
+mbreak = { }
 global = {
-  \time 6/8 \key g \major
+  \time 2/4 \key c \major
 }
 
 upperVoice = \relative c' {
   \voiceOne
-  \slurDown
-
-  <g b>4.\mf \appoggiatura c16 b8 ais b |
-  d4 cis8 c4 r8 |
-  <g b>4. \appoggiatura c16 b8 ais b |
-  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
-  <g' b>4. \appoggiatura c16 b8 ais b |
+  \partial 8 { g8-\tweak X-offset #2 \p }
+  c4. b8 |
+  c4. b8 |
+  c8 d e f |
+  g4 e |
+  c4. b8 |
   \mbreak
-
-  d4 cis8 c4 r8 |
-  <g b>4. <a c> |
-  <g b>8 q q q4 r8 |
-  c4 a8 d4. |
-  b4 g8 d'4. |
-  <a c>4. <g b> |
-  a4. r4 r8 |
+  c4. b8 |
+  c8 d e f |
+  d4. r16 g,-\tweak X-offset #1.5 \f |
+  c4. b8 |
+  c4. b8 |
+  c8 d e f |
   \mbreak
-
-  c4 a8 d4. |
-  b4 g8 d'4. |
-  <a c>8 d, d' <g, b> d d' |
-  a8 d, e fis g a |
-  <g b>4. \appoggiatura c16 b8 ais b |
-  d4 cis8 c4 r8 |
-  <g b>4. \appoggiatura c16 b8 ais b |
+  g4 e |
+  c4. b8 |
+  c4. b8 |
+  c8 d e f |
+  d4 r-\tweak X-offset #2.5 \p |
+  d4. d8 |
   \mbreak
-
-  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
-  <g' b>4. \appoggiatura c16 b8 ais b |
-  d4 cis8 c4 r8 |
-  <g b>4. <a c> |
-  <g b>8 q q <g b g'>4 r8 |
-
+  e4. c8 |
+  b8 b b b |
+  c8 e g4 |
+  d4. d8 |
+  e4. c8 |
+  b8 c d b |
+  \mbreak
+  c4 r |
+  d4.-\tweak X-offset #-2.5 \f d8 |
+  e4. c8 |
+  b8 b b b |
+  c8 e g4 |
+  d4. d8 |
+  \mbreak
+  e4. c8 |
+  b8 b b b |
+  c4.-\tweak X-offset #-2.5 \p b8 |
+  c4. b8 |
+  c8 g' c, b |
+  c8 g' c, b |
+  \mbreak
+  c8 g,16 g'-\tweak X-offset #-0.2 \f a, a' b, b' |
+  c,16 c' e, e' g, g' e, e' |
+  c4-\tweak X-offset #2 \f <e c g> |
+  q4 q |
+  <e c g e>4 r <c' g e>4 r |
+  <c, g e>2
+  
   \bar "|."
 }
 
 lowerVoice = \relative c {
   \voiceTwo
-  g8 b d g, b d |
-  fis,8 a d fis, a d |
-  g,8 b d g, b d |
-  <fis, d'>4 r r |
-  g8 b d g, b d |
+  \partial 8 { r8 }
+  e16 g e g e g f g |
+  e16 g e g e g f g |
+  e16 g b, g' c, g' d g |
+  e16 g e g e g e g |
+  e16 g e g e g f g |
+  
+  e16 g e g e g f g |
+  e16 g b, g' c, g' d g |
+  b,16 g' fis g f g d r |
+  c16 g' e g c, g' f g |
+  c,16 g' e g c, g' f g |
+  c,16 g' b, g' c, g' d g |
 
-  fis,8 a d fis, a d |
-  g,8 b d fis, a d |
-  g,8 b d g,4 r8 |
-  fis8 a d fis, a d |
-  g,8 b d g, b d |
-  fis,8 a d g, b d |
-  fis,8 a d fis, a d |
+  c,16 g' e g c, g' e g |
+  c,16 g' e g c, g' f g |
+  c,16 g' e g c, g' f g |
+  c,16 g' e g c, g' e g |
+  b,16 g' d g g,4 |
+  f'16 g f g f g f g |
 
-  fis,8 a d fis, a d |
-  g,8 b d g, b d |
-  fis,4. g |
-  fis4. r4 r8 |
-  g8 b d g, b d |
-  fis,8 a d fis, a d |
-  g,8 b d g, b d |
+  e16 g e g e g e g |
+  f16 g f g f g f g |
+  e16 g e g e g e g |
+  f16 g f g f g f g |
+  e16 g e g e g e g |
+  d16 g e g f g d g |
 
-  <fis, d'>4 r8 r4 r8 |
-  g8 b d g, b d |
-  fis,8 a d fis, a d |
-  g,8 b d fis, a d |
-  g,8 b d g,4 r8
+  e16 g e g e g e g |
+  b,16 g' f g b, g' f g |
+  c,16 g' e g c, g' e g |
+  d16 g f g d g f g |
+  c,16 g' e g c, g' e g |
+  b,16 g' f g b, g' f g |
+
+  c,16 g' e g c, g' e g |
+  d16 g f g d g f g |
+  c,16 g' e g e g f g |
+  e16 g e g e g f g |
+  e16 g e g e g f g |
+  e16 g e g e g f g |
+
+  e8 g, a b |
+  c8 e g e |
+  c4 c |
+  g4 e |
+  c'4 r |
+  c'4\4 r |
+  c,2
 }
-
 
 
 \score {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
-      %instrumentName = #"No. 1"
+      \override StringNumber #'stencil = ##f
     } <<
       \global
       \clef "treble_8"
-      \tempo "Grazioso."
+      \tempo "Allegretto."
 
       \context Voice = "upperVoice" \upperVoice
       \context Voice = "lowerVoice" \lowerVoice
@@ -132,6 +170,6 @@ lowerVoice = \relative c {
   >>
   \layout {}
   \midi {
-    \tempo 4 = 100
+    \tempo 4 = 96
   }
 }
