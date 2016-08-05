@@ -128,6 +128,18 @@ upperVoice = \relative c'' {
   \time 4/4 <g b,, g d>4 fis16 e d c b4 <a fis c> |
   \time 2/4 <g d-1 b-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
   <g, d b>4 d'\harmonic | <g, d b> d'\harmonic |
+  
+  %{Cancion y estribillo%}
+  \key g \minor
+  \time 4/4
+  g,4 g16 a bes c bes8 a16 bes g8 a |
+  bes8 c c4 d4 r8 f, |
+  bes4 bes16 c d ees d8 c16 d bes8 c |
+  <d f,>8 <e g,> <e g,>4 <fis a,> d, |
+  g f16 g f ees! d8 d bes c |
+  d8 <d bes>4 <d bes>8 g4 f16 g f ees |
+  <d bes>8 <d g,> <bes g> <c f,>16 es, <d' d,>8 <g, d> a <bes d,> |
+  <a es> g fis16 e fis g g4 %{this is where piano takes over%} r4 | 
   \bar "|."
 }
 
@@ -175,7 +187,20 @@ lowerVoice = \relative c {
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  s2 | 
+  s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s1 |
+  s2 | s2 |
+  s2 | s4 s8. d''16 |
+  g8 f <c es>8 <bes d> <g ees'> <a f'> <bes d> <c ees> |
+  <bes d>8 <f c'> <f c'>4 <bes, f'> r |
+  bes''8 a <ees g>8 <d f> <bes g> <c ees> <d f> <c ees>|
+  bes8 cis cis4 <d, fis'> d'8 c~ |
+  c8 bes a f bes a g f |
+  bes8 a g f <ees bes'>4 <a, c'> |
+  bes4 ees8 a, bes4 c8 bes |
+  c8 ees <d, c'>4 <g bes> r4 |
 }
 
 middleVoice = \relative c' {
