@@ -84,14 +84,14 @@ upperVoice = \relative c'' {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  <d,-1 b-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <d, b> d'\harmonic |
-  <d, b>4 d'\harmonic | <d, b> d'\harmonic |
+  <d,-1 b-2>4 %{need to move this 2 up%} d'-4-\4 | <d, b> d' |
+  <d, b>4 d' | <d, b> d' |
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
-  s4 d-4 | s4 d-4\harmonic |
+  s4 d-4 | s4 d-4 |
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
-  s4 d-4 | s4 d-4\harmonic |
+  s4 d-4 | s4 d-4 |
   s4 f,4 | s4 f4 |
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
@@ -107,19 +107,18 @@ upperVoice = \relative c'' {
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
   %{I have a note that this is where the piano takes over%}
-  <d b>4 g' | <d, b> g'~ |
+  <d b>4 g' | <d, b> g' |
   \time 4/4 <g b,, g d>4 fis16 e d c b4 <a fis c> |
   \time 2/4 <g d-1 b-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
-  <g, d b>4 d'\harmonic | <g, d b> d'\harmonic |
-  %getting lost here
+  <g, d b>4 d'\harmonic |
+  <d, b> d'\harmonic | %getting lost here
+  s4 d4 | s4 d4 |
+  s4 d4 | s4 d4 |
+  s4 d4 | s4 d4 |
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  s2 | s2 |
-  s2 | s2 |
-  s2 | s2 |
-  s2 | s2 |
-  s2 | 
+  s2 | s2 | 
   <d, a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d, a>16 b c d d'4 \harmonic | <b d,>8 <a c,>16 <b d,> <g b,>4 |
   <d a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
@@ -130,8 +129,8 @@ upperVoice = \relative c'' {
   <d b>4 g'\harmonic | <d, b> g'\harmonic |
   \time 4/4 <g b,, g d>4 fis16 e d c b4 <a fis c> |
   \time 2/4 <g d-1 b-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
-  <g, d b>4 d'\harmonic | <g, d b> d'\harmonic |
-  <d,-1 bes-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d bes> d'\harmonic |
+  <g, d b>4 d'\harmonic | <g, d b> d'8.\harmonic d,16~ | %move harmonic to another voice
+  <d-1 bes-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d bes> d'\harmonic |
   <g, d bes>4 d'\harmonic | <g, d bes> d'\harmonic |
   
   %{Cancion y estribillo%}
@@ -234,12 +233,11 @@ lowerVoice = \relative c {
   <g d'>2 | <g d'>2 | %2nd melody start in piano
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 |
+  <g d'>2 | <g d'>2 | 
+  <g d'>2 | g4 g8 d8 | 
+  <g d'>2 | g4 g8 d8 |
+  <g d'>2 | g4 g8 d8 |
+  <g d'>2 | g4 g8 d8 |
   <g d'>2 |
   <g d'>2 |
   <g d'>2 |
@@ -314,42 +312,45 @@ middleVoice = \relative c' {
   \override TextSpanner.dash-period = #1
   \slurUp
   s2 | s2 |
-  s2 | s4 s8. d16-4-\2\glissando |
+  s2 | s4 s8. d16-3-\3 |
   %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
+  <a c,>8 a <a c,>16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
+  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-3 fis-4 | \stemUp <g-4-\3 b,-0-\2>4 \stemNeutral r8. d16-3-\3 |
   %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d,16 |
+  <a c,>8 a <a c,>16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
+  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-3 fis-4 | \stemUp <g-4-\3 b,-0-\2>4 \stemNeutral r8. d,16-3-\6 |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
+  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
+  c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>8. d,16-3-\6 |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4 |
+  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
+  c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>4 |
   s2 | s2 |
-  s1 |
   s2 | s2 | %{need to edit stuff below here%}
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  s2 | s2 |
-  s2 | s2 |
-  s2 | s4 s8. d16-4-\2\glissando |
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d,16-4 \glissando |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
+  s2 | s1 |
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  s4 g'4 | 
+  s2 | s2 |
+  \stemUp b,4 b |
+  d4 b |
+  c4 c |
+  e4 c |
+  e4 e |
+  g4 fis |
+  b4 b |
+  d4 b | \stemNeutral
+  s2 | 
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
   s2 | s2 |
   s1 |
   s2 | s2 |
@@ -363,18 +364,18 @@ middleVoice = \relative c' {
   s1 | s1 |
   s1 | s1 |
   s1 | s1 |
-  s1 | s1 |
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,,16-0 |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
+  s1 | s1 |  
+  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
+  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
+  fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 |
+  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
+  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
+  fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 |
+  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
+  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
+  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. \ottava #1 d16 |  
+  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g4 \ottava #0 |
+  g,8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
   <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4 |
@@ -386,7 +387,7 @@ middleVoice = \relative c' {
   r2 | r1 |
   r2 | r2 |
   r2 | r2 |
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
+  %{\stemUp%} <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
@@ -417,10 +418,10 @@ pianoA = \relative c'' {
   r2 r2 |
   r2 r2 |
   r2 r4. r16 d, |
-  <g b,>8 g <g b,>16 a b c | \acciaccatura c8-2 <b d,>-0-\2 a16 b <g b,>8. e16 |
-  <a c,>8 a <a c,>16 b c d | \acciaccatura d8-4 <c e,> b16 c <a c,>8. g16 |
-  <c e,>8 c <c-1 e,-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4 |
+  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,> a16 b <g b,>8. e16 |
+  <a c,>8 a <a c,>16 b c d | \acciaccatura d8 <c e,> b16 c <a c,>8. g16 |
+  <c e,>8 c <c e,>16 d e fis | \acciaccatura fis <e g,>8 d16 e16 <c fis,>8. d16 |
+  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,>8 a16 b <g b,>4 |
   %guitar plays melody the first time
   <d, a>16 b c d d'4 | r2 |
   <d, a>16 b c d d'4 | r2 |
@@ -431,16 +432,15 @@ pianoA = \relative c'' {
   r4 r4 |
   r2 |
   r1 |
-  <g d-1 b-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
-  <g, d b>4 d'\harmonic | <g, d b> d'\harmonic |
-  r2 |
-  <g, b,>8 g <g b,>16 a b c | \acciaccatura c8-2 <b d,>-0-\2 a16 b <g b,>8. e16 |
-  <a c,>8 a <a c,>16 b c d | \acciaccatura d8-4 <c e,> b16 c <a c,>8. g16 |
-  <fis-3 a,-1>8 <fis-1 c> \acciaccatura g8-2 <fis-1 a,-3>16 d-1 <e-2 c> fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
-  <g b,>8 g <g b,>16 a b c | \acciaccatura c8-2 <b d,>-0-\2 a16 b <g b,>8. e16 |
-  <a c,>8 a <a c,>16 b c d | \acciaccatura d8-4 <c e,> b16 c <a c,>8. g16 |
-  <c e,>8 c <c-1 e,-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |  
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
+  r2 | <g d b>2 |
+  <g d b>2 | <d b>4 r8. d,16 |
+  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
+  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
+  fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 |
+  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
+  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
+  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. \ottava #1 d16 |  
+  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g4 \ottava #0 |
   <d a>2 |
   r2 |
   <d a>2 |
@@ -458,15 +458,20 @@ pianoA = \relative c'' {
   r2 | r2 |
   r2 | r2 |
   r2 |
+  \key bes \major r1 | r1 | %guitar plays first
   r1 | r1 |
   r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  %{\stemUp%} <g'-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
+  r1 | r2 r4 d4 |
+  g4 g16 a bes c bes8 a16 bes g8 a |
+  bes8 c c8 d32 c bes c d4 r8 f, |
+  bes4 bes16 c d ees d8 c16 d bes8 c |
+  <d f,>8 <e g,> <e g,>8 fis32 e d e <fis a,>4 d |
+  bes'16 a g8 f16 g f ees! d8 d bes c |
+  d16 ees <d bes>8~ <d bes>8 <d bes> g4( f16) g f ces |
+  <bes f>8 <c g> <d a> <g, d> <a es> bes <a d,> g |
+  <a es> g fis16 e fis g g4 \fermata s8 g' \fermata |
+  \key g \major %{\stemUp%} %how to add another double bar here -- add d pickup?
+  <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
   %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
@@ -475,7 +480,7 @@ pianoA = \relative c'' {
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,,16-0 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
@@ -493,7 +498,7 @@ pianoA = \relative c'' {
   r2 | r1 |
   r2 | r2 |
   r2 | r2 |
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
+  %{\stemUp%} <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
@@ -584,11 +589,11 @@ pianoC = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
   <g d'>2 | g8 g16 d' g,8 d8 |
   <g d'>2 | g8 g16 d' g,8 d8 |
   <g d'>2 | g8 g16 d' g,8 d8 |
   <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 |
   <g d'>2 |
   <g d'>2 |
   r1 |
@@ -600,12 +605,16 @@ pianoC = \relative c {
   r1 | r1 |
   r1 | r1 |
   r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  r1 | r1 |
-  <g d'>2 | <g d'>2 |
+\key bes \major  r1 | r2 r4 d''8 c8 |
+  g'8 f <c es>8 <bes d> <g ees'> <a f'> <bes d> <c ees> |
+  <bes d>8 <f c'> <f c'>4 <bes, f'> r |
+  bes''8 a <ees g>8 <d f> <bes g> <c ees> <d f> <c ees>|
+  bes8 cis cis4 <d, fis'> d'8 c~ |
+  c8 bes a f bes a g f |
+  bes8 a g f <ees bes'>4 <a, c'> |
+  bes4 ees8 a, bes4 c8 bes |
+  c8 ees <d, c'>4 <g bes> r4 |
+\key g \major  <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |  
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |  
