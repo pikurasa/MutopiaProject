@@ -559,6 +559,15 @@ pianoB = \relative c' {
   g4 fis |
   b4 b |
   d4 b |
+  s2*19 |
+  s1 | %measure 44
+  s2*29 |
+  s1 | %measure 74
+  s2*8 |
+  s1 | %measure 83
+  s1*6 | 
+  s2. d,8 c | %measure 90
+  %insert from other piano part starting here...
 }
 
 pianoC = \relative c {
@@ -615,10 +624,10 @@ pianoC = \relative c {
   r2 | r2 |
   r2 | 
   r2 |
+\key bes \major  r1 | r1 |
   r1 | r1 |
   r1 | r1 |
-  r1 | r1 |
-\key bes \major  r1 | r2 r4 d''8 c8 |
+  r1 | r2 r4 d''8 c8 |
   g'8 f <c es>8 <bes d> <g ees'> <a f'> <bes d> <c ees> |
   <bes d>8 <f c'> <f c'>4 <bes, f'> r |
   bes''8 a <ees g>8 <d f> <bes g> <c ees> <d f> <c ees>|
