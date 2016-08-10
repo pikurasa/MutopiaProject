@@ -2,9 +2,10 @@
 
 \header {
   title = "Danza Espanola No. 4"
-  subtitle = "Arr. Guitar and Piano"
+  subtitle = "Villanesca."
   composer = "Enrique Granados"
-  arranger = "Arr. for Guitar by Devin Ulibarri"
+  piece = \markup { \circle 6 = D \circle 5 = G } % drop D and drop G tuning
+  arranger = "Arranged for Guitar by Devin Ulibarri"
   opus = ""
   style = "Based loosely on piano version from IMSLP -- TO BE FILLED IN"
   source = "Guitar Arrangement by Devin Ulibarri"
@@ -34,6 +35,7 @@ mbreak = {} % { \break }
 global = {
   \time 2/4
   \key g \major
+  \tempo "Allegretto, alla pastorale."
 }
 
 %% C with slash -------------------------------
@@ -84,11 +86,14 @@ upperVoice = \relative c'' {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
+  \override Fingering.add-stem-support = ##t
+  \override StringNumber.add-stem-support = ##t
+  \override StrokeFinger.add-stem-support = ##t
   <d,-1 b-2>4 %{need to move this 2 up%} d'-4-\4 | <d, b> d' |
-  <d, b>4 d' | <d, b> d' |
+  <d, b>4 d' | <d, b> d' \bar "||"
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
-  s4 d-4 | s4 d-4 |
+  s4 d-4 | s4 d-4 \bar "||"
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
   s4 d-4 | s4 d-4 |
@@ -201,6 +206,9 @@ lowerVoice = \relative c {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
+  \override Fingering.add-stem-support = ##t
+  \override StringNumber.add-stem-support = ##t
+  \override StrokeFinger.add-stem-support = ##t
   \stemDown
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
@@ -304,12 +312,17 @@ lowerVoice = \relative c {
 
 middleVoice = \relative c' {
   \voiceTwo
-  \set stringNumberOrientations = #'(down)
   \set fingeringOrientations = #'(down)
+  \set stringNumberOrientations = #'(up down)
+  \set strokeFingerOrientations = #'(up down)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
+  \override Fingering.add-stem-support = ##t
+  \override StringNumber.add-stem-support = ##t
+  \override StrokeFinger.add-stem-support = ##t
+
   \slurUp
   s2 | s2 |
   s2 | s4 s8. d16-3-\3 |
