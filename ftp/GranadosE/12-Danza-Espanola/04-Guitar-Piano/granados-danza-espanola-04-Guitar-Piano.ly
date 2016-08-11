@@ -475,14 +475,14 @@ pianoA = \relative c'' {
   r1 | r1 |
   r1 | r1 |
   r1 | r2 r4 d4 |
-  g4 g16 a bes c bes8 a16 bes g8 a |
-  bes8 c c8 d32 c bes c d4 r8 f, |
-  bes4 bes16 c d ees d8 c16 d bes8 c |
-  <d f,>8 <e g,> <e g,>8 fis32 e d e <fis a,>4 d |
-  bes'16 a g8 f16 g f ees! d8 d bes c |
+\stemUp  g4 g16 a bes c bes8 a16 bes g8 a |
+  bes8 c c8 d32( c bes c d4) f,4( |
+  bes4) bes16 c d ees d8 c16 d bes8 c |
+  <d f,>8 <e g,> e8( fis32 e d e <fis d>4) d( |
+  bes'16) a g8 f16 g f ees! d8 d bes c |
   d16 ees <d bes>8~ <d bes>8 <d bes> g4( f16) g f ces |
-  <bes f>8 <c g> <d a> <g, d> <a es> bes <a d,> g |
-  <a es> g fis16 e fis g g4 \fermata s8 g' \fermata |
+  bes8 c d g, a bes a g |
+  <a es> g fis16 e fis g g4 \fermata g'8 \fermata \bar "||"  r8 | \stemNeutral
   \key g \major %{\stemUp%} %how to add another double bar here -- add d pickup?
   <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
@@ -567,7 +567,14 @@ pianoB = \relative c' {
   s1 | %measure 83
   s1*6 | 
   s2. d,8 c | %measure 90
-  %insert from other piano part starting here...
+  g'8 f <c es>8 <bes d> ees f d ees |
+  f8 a a bes32 a g a bes4 \slurDown f8( ees |
+  bes'8) \slurNeutral a <ees g>8 <d f> <bes g'> <c ees a> <d f> <c ees a> |
+  f8 g cis d32 cis b cis fis,4 d'8 c~ |
+  c8 bes a f bes a g f |
+  bes16 c bes8~ bes bes d c~ c8. ces16 |
+  f,8 g a d, ees4 d |
+  c8 bes c4~ c8 a bes8. %{how to beam across bar?%} d16 |
 }
 
 pianoC = \relative c {
@@ -627,15 +634,15 @@ pianoC = \relative c {
 \key bes \major  r1 | r1 |
   r1 | r1 |
   r1 | r1 |
-  r1 | r2 r4 d''8 c8 |
-  g'8 f <c es>8 <bes d> <g ees'> <a f'> <bes d> <c ees> |
-  <bes d>8 <f c'> <f c'>4 <bes, f'> r |
-  bes''8 a <ees g>8 <d f> <bes g> <c ees> <d f> <c ees>|
-  bes8 cis cis4 <d, fis'> d'8 c~ |
-  c8 bes a f bes a g f |
-  bes8 a g f <ees bes'>4 <a, c'> |
-  bes4 ees8 a, bes4 c8 bes |
-  c8 ees <d, c'>4 <g bes> r4 |
+  r1 | r1 |
+\stemDown  s2 g'8 a bes c |
+  <bes d>8( <f c'> <f c'>4 <bes, f'>) r |
+  s1 |
+  <bes' d>8 <a cis> <a cis g'>4 <d, a'> s4 |
+  s1 |
+  bes'8 a g f \slurUp <e bes' g'>4( <ees a f'>) | \slurNeutral
+  <d aes>8 <ees g> <d fis> <bes g> <c g>4 <bes g> |
+  c8 ees d,4 g,\fermata r4 | \stemNeutral
 \key g \major  <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |  
   <g d'>2 | <g d'>2 |
