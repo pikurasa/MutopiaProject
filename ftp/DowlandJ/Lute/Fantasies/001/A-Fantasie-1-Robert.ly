@@ -1,14 +1,14 @@
 \version "2.18.2"
 
 \header {
-  title = "I. A Fantasie"
+  title = "Fantasie VII"
   subtitle = "Arranged for Guitar"
   composer = "Dowland J."
   piece = \markup { \circle 3 = "F#" and capo at 2nd or 3rd fret } % tune g down 1/2 step to f#, then capo at 3rd fret
   arranger = "Arranged for Guitar by Devin Ulibarri and Robert Wang"
   opus = ""
-  style = "First Attempt is Referencing 1974 Faber Edition -- TO BE FILLED IN"
-  source = "Guitar Arrangement by Devin Ulibarri and Robert Wang"
+  style = ""
+  source = "Variatie of Lute Lessons by Robert Dowland | http://imslp.org/wiki/A_Varietie_of_Lute_Lessons_%28Dowland,_Robert%29 | Pages 28-30 from PDF"
   date = ""
   mutopiacomposer = "Dowland J."
   mutopiainstrument = "Guitar"
@@ -33,7 +33,7 @@
 
 mbreak = {} % { \break }
 global = {
-  \time 4/4
+  \time 2/2
   \key g \major
 }
 
@@ -98,18 +98,16 @@ upperVoice = \relative c'' {
   a2 g4 r4 | r4 r8 a b c d4 | 
   r4 cis d4. c8 | b a g a16 b c4. b8 | 
   <a fis>8 g-\2 a b16 c d4 c | b a g8 b a g | b4 a~ a8 g g4~| 
-  g16 g-\2 fis e fis g-\2 e fis <d g>2 | r4 d~ d8 a c4~ | 
-  c8 d b4~ b8 a fis4 | g4. a8 b a b c | 
+  g16 g-\2 fis e fis g-\2 e fis <d g>4 d~ | d8 a c4~ c8 d b4~ | %measure 28; this is where the Faber version diverged by a half note's length
+  b8 a fis4 g4. a8 | 
+  b8 a b c | 
   d4. d8 e d e fis | g2 fis8 d fis g | 
   a2 g8 c~ c16 c b8~ | b16 b a8~ a16 a g8~ g16 g fis e fis g e fis |
   g4. r8 d e fis g | a fis g e fis a~ a16 e a8~ | 
   a16 fis a8~ a16 g fis e fis e d cis d e fis d | e d e fis g a b g a g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis e fis | 
   g4 r r2 | r8 g g g fis d~ d16 e fis8 |  r e' e e d b~ b16 c d8 | 
   c a c4 b4. c8~ | c b a4 gis8-\2 a-\2~ a16 a-\2 gis8-\2 | 
-  r a a4 r8 a a a | fis d d4 r8 d' d d | 
-  b g g4 r8 g g e | g d e g g e g d | 
-  e g c g a g c g | a b c a b4. c8~ | 
-  c b a4 gis8-\2 a-\2~ a16 a-\2 gis8-\2 | r8 a a a fis8. g16 a4 |
+  r8 a a a fis8. g16 a4 |
   d,8 g8~ g8 fis r2 | r4 a, r8 b' a c |
   b g a4 r8 d,4 r8 | r4 a r8 d'8 g, c |
   b g a4 r2 | r4 a, r8 e''8 d c | b a16 g a8 fis g4 r | 
@@ -123,8 +121,8 @@ upperVoice = \relative c'' {
   a g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis g64-\2 fis e fis r8 b,4 a8 | b g a4 r8 b'4 a8 |
   b g a4 r8 c,4 b8 | c a b4 r8 c'4 b8 | 
   c a <b e,>4 r8 b8. b16 a8~ | a16 b g8 fis d a'~ a16 g fis e d cis |
-  d e fis e fis d e8 \tuplet 3/2 { fis8 e4 } \tuplet 3/2 { fis8 d4 }
-  \time 12/8
+  d e fis e fis d e8
+  \time 3/4
   \tempo \markup {
     \concat {
       (
@@ -134,17 +132,17 @@ upperVoice = \relative c'' {
       )
     }
   }
-  d8 fis4 e8 g fis g b a b g4 | g8 b4 a8 b g c g4 g8 c g |
+  fis8 e4 fis8 d4
+  d8 fis4 e8 g fis g b a b g4 | g8 b4 a8 c b c g4 g8 c g | % was  g8 b4 a8 b g c g4 g8 c g |
   g a4 g8 e4 fis8 a4 fis8 d e | fis a4 d,8 g fis b4. r4. |
   b4. r4. a r | a r d r |
   d r c r | c r b r | 
   b r a r | a r g r | 
   g r g8 g f e e d | g g r e e d g4. r 
-   \time 6/8
   \tempo \markup {
   }
   s1 
-   \time 4/4
+   \time 2/2
   \tempo \markup {
     \concat {
       (
@@ -154,8 +152,7 @@ upperVoice = \relative c'' {
       )
     }
   }
-  r8 <d g>4. <d g>2
-  \bar "|."
+  r8 <d g>4. <d g>2 \bar "|."
 }
 
 
@@ -203,7 +200,7 @@ middleVoice = \relative c' {
   fis8 e4 d8~ d4 cis |
   d4. c!8 b4 a8 g |
   r16 a8.~ a4 b2 |
-  s1 |
+  s2 | %measure 29; The Faber diverges here
   s1 | %measure 30
   s1 |
   a2 <c a> |
@@ -219,14 +216,8 @@ middleVoice = \relative c' {
   r8 a4. r2 |
   e4 e e <e b> |
   a2 b8 a b4 |
-  r8 <e cis>4. r2 |
-  a,2 r2 |
-  r4 <d b> r2 |
-  s1 |
-  r4 r8 c~ c4. c8~ |
-  c8 r8 e4 e e | %measure 50
-  a,2 b8 a b4 |
-  <e cis a>2 a, |
+  <cis a>2 |
+  a2 |
   b4 a r8 b a c |
   b8 g a fis r d'4. |
   d4 r8 fis r d a c |
