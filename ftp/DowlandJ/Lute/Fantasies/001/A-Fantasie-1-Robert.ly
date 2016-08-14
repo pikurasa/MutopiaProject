@@ -112,31 +112,33 @@ upperVoice = \relative c'' {
   <a fis>8 g-\2 a b16 c d4 c | 
   b a g8 b a g |  %measure 26
   b4 a~ a8 g g4~| 
-  g16 g-\2 fis e fis g-\2 e fis g4 d~ | 
-  d8 a c4~ c8 d b4~ | %measure 28; this is where the Faber version diverged by a half note's length
+  g16 g-\2 fis e fis g-\2 e fis g4 d~ | %measure 28; this is where the Faber version diverged by a half note's length
+  d8 a c4~ c8 d b4~ | 
   b8 a fis4 g4. a8 | 
   b8 a b c d4. d8 | 
-  e8 d e fis g2 |  %measure 31
+  e8 d e fis g2 |  %measure 32
   fis8-\2 d fis g a2 |
   g8 c~ c16 c b8~  b16 b a8~ a16 a g8~ |
   g16 g fis e fis g e fis g4. r8 |
   d8 e fis g <a d,>8 fis g e |
-  fis8 a~ a16 e a8~ a16 fis a8~ a16 g fis e |  %measure 36
+  fis8 a~ a16 e a8~ a16 fis a8~ a16 g fis e |  %measure 37
   fis16 e d cis d e fis d e d e fis g a b g | 
   a16 g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis e fis g4 r |
   r2 r8 g g g |
-  fis8 d8. e16 fis8 r e' e e |  %measure 40
+  fis8 d8. e16 fis8 r e' e e |  %measure 41
   d8 b~ b16 c d8 c a c4 |
   b4. c8~ c b a4 |
-  gis8-\2 a-\2~ a16 a-\2 gis8-\2 r8 a a a | %measure 43
+  gis8-\2 a-\2~ a16 a-\2 gis8-\2 r8 a a a | %measure 44
   fis8. g16 a4 d,8 g8~ g8 fis | 
-  r2 r4 r4 |
+  s1 |
   r8 b a c | %stopping here for now -- is there a better way to move barlines???
   b g a8 fis r8 |
   r4 r4. a,4 r8 d'8 g,-\1 c |
   b g a8 fis g2 | r4 a, r8 e''8-\1 d-\1 c | b a16 g a8 fis g4 r | 
   r a, r8 g' a16 b c b | b8 a g fis g2 |
-  r r16 <g d>8.~ g4 | r2 fis16 d d e fis g a b |
+  r 
+  s1 | s1 | s1 | s1 |
+  r16 <g d>8.~ g4 | r2 fis16 d d e fis g a b |
   a fis d e fis g a b c c, c d e e e fis | g c, c d e fis g a b a g fis g a b a |
   b g a b g fis g a g fis g a b a b g | a g a b a g fis e fis e fis g fis e d cis |
   d cis d e fis e fis d e d e fis g fis g e | fis e fis g a g a fis g fis g a b a g fis |
@@ -175,7 +177,7 @@ upperVoice = \relative c'' {
       )
     }
   }
-  r8 <d g>4. <d g>2 \bar "|."
+  r8 <d g>4~ <d g>8 <d g>4 \bar "|."
 }
 
 
@@ -228,66 +230,64 @@ lowerVoice = \relative c {
   fis'8 d8. e16 fis8. e8.~ e4 | %measure 40
   d4 b c2 |
   b4 g a2 |
-  g8 c4. f4. f8 | %measure 43
+  g'8 e4. f4. f8 | %measure 43
   e4 e <a, e'>2 | %measure 44
-  r8 d d d b8. c16 d4 |
-  g,2 g2 |
-  g2. d'4 |
+  s8 d d d b8. c16 d4 |
+  g,2 g4 d'4 |
   g,2. d'4 | %measure 47
+  g,2. d'4 | 
   g,8 b c-\6 a g4 d' |
   g,2 g4 d' |
-  g,8 b-\6 a4-\6 g d' |
   g,2 g4 d' |
-  g,8 b a4 g d' | %measure 52
+  g,2 g4 d' | %measure 52
+  g,8 b a4 g d' | 
   g,2 g4 d' |
-  g,2 g2 | 
+  g,8 b a4 g d' | 
   g,2 g4 d' |
-  g,8 b a4 g d' | %measure 56
+  g,8 b a4 g d' | %measure 57
   g,2 g4 d' |
-  g,8 b a4 g d' |
-  g,2 g4 d' |
-  g,2 g2 | %measure 60, where the 32nd notes begin
+  g,2 g2 | %measure 59, where the 32nd notes begin
   d'2 d |
-  c2 c | %measure 62
+  c2 c | %measure 61
   g2 g |
   e'2 c |
-  d2 b | %measure 65
+  d2 b | %measure 64
   c2 d |
-  g,2 g'4 d | %measure 67
+  g,2 g'4 d | %measure 66
   e4 c d b |
   c4 e d r | %Hard to read lute tab, I think this last one is rest
-  g,2. d'4 | %measure 70
+  g,2. d'4 | %measure 69
   g,2. d'4 |
   g,2. e'4 |
   a,2. e'4 |
-  g,2. d'4 | %measure 74
+  g,2. d'4 | %measure 73
   d2 d4. cis8 |
-  d4 cis8 d4 b8 | %measure 76, where the 6/8 begins
-  b4 g8 f4 g8 | %measure 77
+  d4 cis8 d4 b8 | %measure 75, where the 6/8 begins
+  b4 g8 f4 g8 | %measure 76
   g4 fis8 g4 e8 |
   e4 g8 f4 g8 |
   c4 e8 e4. |
   e4 f8 e4 c8 |
   d4 a8 d4 a8 |
-  d4 a8 b g d |  %measure 83
+  d4 a8 b g d |  %measure 82
   g8 g' g g g g |
   r8 g g g g g |
   d8 d cis d d a |
   d8 d a d d c |
   b8 g d' b g d'-\6 |
-  b8 g d'-\6 b g g | %measure 89
+  b8 g d'-\6 b g g | %measure 88
   c8 c c c c d |
   e8 e d e e fis |
   g8 g g g, g g |
   g8 g a b b c |
   d8 d cis d d a |
-  c8 c a d d c | %measure 95
+  c8 c a d d c | %measure 94
   b8 g b c g c |
   b8 b g g' g f |
   e8 e d c c b |
   e8 e d c c b |
   c8 b c b c b |
-  c8 b c b c4 | %measure 101
+  c8 b c b c4 | %measure 100
   g2 g2 |
 }
 
