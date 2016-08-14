@@ -218,12 +218,12 @@ lowerVoice = \relative c {
   g,8 b a4 g d' | %measure 52
   g,2 g4 d' |
   g,2 g2 | 
-  
-  %measure 56
-  
-  
-  
-  %measure 60, where the 32nd notes begin
+  g,2 g4 d' |
+  g,8 b a4 g d' | %measure 56
+  g,2 g4 d' |
+  g,8 b a4 g d' |
+  g,2 g4 d' |
+  g,2 g2 | %measure 60, where the 32nd notes begin
   d'2 d |
   c2 c | %measure 62
   g2 g |
