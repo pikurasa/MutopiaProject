@@ -85,30 +85,53 @@ upperVoice = \relative c'' {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  d2 b4 d | c b a2 |
-  g4 b a g~ | g8 a fis4 g4. fis8 |
-  e8. fis16 g8 fis16 g a8. b16 c8 b16 a | b8. c16 d4 c4 b4 |
-  <a d,>4. a8 g d4 f8 | e4 d c8. d16 e8 fis! |
-  g2 fis8 e16 fis g4~ | g4 fis g-\1 d | 
-  b d c b |  a4. b8 c d e fis | 
-  g a b g c4 b4~ | b a <b fis-\2>4. b8~ |
-  b4 g a b | c4. c8 b4 a~ | 
-  a8 g g4~ g16 g-\2 fis e fis g-\2 a,-\4 fis' | g2 s2 | 
-  s2 s4 r8 g8 | a b c4~ c8 c8 b4 | 
-  a2 g4 s4 | s4 r8 a b c d4~ | 
-  d4 cis d4. c8 | b a g a16 b c4. b8 | 
-  <a fis>8 g-\2 a b16 c d4 c | b a g8 b a g | b4 a~ a8 g g4~| 
-  g16 g-\2 fis e fis g-\2 e fis g4 d~ | d8 a c4~ c8 d b4~ | %measure 28; this is where the Faber version diverged by a half note's length
+  d2 b4 d | %measure 1
+  c b a2 |
+  g4 b a g~ | 
+  g8 a fis4 g4. fis8 |
+  e8. fis16 g8 fis16 g a8. b16 c8 b16 a | 
+  b8. c16 d4 c4 b4 | %measure 6
+  <a d,>4. a8 g d4 f8 | 
+  e4 d c8. d16 e8 fis! |
+  g2 fis8 e16 fis g4~ | 
+  g4 fis g-\1 d | 
+  b d c b | %measure 11
+  a4. b8 c d e fis | 
+  g a b g c4 b4~ |
+  b a <b fis-\2>4. b8~ |
+  b4 g a b | 
+  c4. c8 b4 a~ | 
+  a8 g g4~ g16 g-\2 fis e fis g-\2 a,-\4 fis' | %measure  17
+  g2 s2 | 
+  s2 s4 r8 g8 | 
+  a b c4~ c8 c8 b4 | 
+  a2 g4 s4 | %measure 21
+  s4 r8 a b c d4~ |  %measure 22
+  d4 cis d4. c8 | 
+  b a g a16 b c4. b8 | 
+  <a fis>8 g-\2 a b16 c d4 c | 
+  b a g8 b a g |  %measure 26
+  b4 a~ a8 g g4~| 
+  g16 g-\2 fis e fis g-\2 e fis g4 d~ | 
+  d8 a c4~ c8 d b4~ | %measure 28; this is where the Faber version diverged by a half note's length
   b8 a fis4 g4. a8 | 
-  b8 a b c | 
-  d4. d8 e d e fis | g2 fis8-\2 d fis g | 
-  a2 g8 c~ c16 c b8~ | b16 b a8~ a16 a g8~ g16 g fis e fis g e fis |
-  g4. r8 d e fis g | <a d,>8 fis g e fis a~ a16 e a8~ | 
-  a16 fis a8~ a16 g fis e fis e d cis d e fis d | e d e fis g a b g a g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis e fis | 
-  g4 r r2 | r8 g g g fis d8. e16 fis8 |  r e' e e d b~ b16 c d8 | 
-  c a c4 b4. c8~ | c b a4 gis8-\2 a-\2~ a16 a-\2 gis8-\2 | 
-  r8 a a a fis8. g16 a4 |
-  d,8 g8~ g8 fis r2 | r4 r4 r8 b a c |
+  b8 a b c d4. d8 | 
+  e8 d e fis g2 |  %measure 31
+  fis8-\2 d fis g a2 |
+  g8 c~ c16 c b8~  b16 b a8~ a16 a g8~ |
+  g16 g fis e fis g e fis g4. r8 |
+  d8 e fis g <a d,>8 fis g e |
+  fis8 a~ a16 e a8~ a16 fis a8~ a16 g fis e |  %measure 36
+  fis16 e d cis d e fis d e d e fis g a b g | 
+  a16 g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis e fis g4 r |
+  r2 r8 g g g |
+  fis8 d8. e16 fis8 r e' e e |  %measure 40
+  d8 b~ b16 c d8 c a c4 |
+  b4. c8~ c b a4 |
+  gis8-\2 a-\2~ a16 a-\2 gis8-\2 r8 a a a | %measure 43
+  fis8. g16 a4 d,8 g8~ g8 fis | 
+  r2 r4 r4 |
+  r8 b a c | %stopping here for now -- is there a better way to move barlines???
   b g a8 fis r8 |
   r4 r4. a,4 r8 d'8 g,-\1 c |
   b g a8 fis g2 | r4 a, r8 e''8-\1 d-\1 c | b a16 g a8 fis g4 r | 
