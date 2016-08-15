@@ -95,7 +95,7 @@ upperVoice = \relative c'' {
   g8 a fis4 g4. fis8 |
   e8. fis16 g8 fis16 g a8. b16 c8 b16 a | 
   b8. c16 d4 c4 b4 | %measure 6
-  <a d,>4. a8 g d4 f8 | 
+  <a d, a>4. a8 g d4 f8 | 
   e4 d c8. d16 e8 fis! |
   g2 fis8 e16 fis g4~ | 
   g4 fis g-\1 d | 
@@ -141,11 +141,11 @@ upperVoice = \relative c'' {
   g2 s4 a, |
   r8 e''8-\1 d-\1 c b a16 g a8 fis | %measure 51
   g2 s2 |
-  r8 g a16 b c b b8 a g fis |
+  r8 g a16 b c a b8 g a fis |
   g1 | 
-  s8 g a16 b c d b8 g a fis | %measure 55
+  r8 g a16 b c d b8 g a fis | %measure 55
   g1 | 
-  s8 g a16 b c b b8 g a fis | 
+  r8 g a16 b c a b8 g a fis | %Original Tab: r8 g a16 b c b b8 g a fis |
   g1 | 
   r16 <g d>8.~ g4 s2 | %measure 59
   fis16 d d e fis g a b a fis d e fis g a b |
@@ -154,14 +154,14 @@ upperVoice = \relative c'' {
   g fis g a b a b g a g a b a g fis e |
   fis e fis g fis e d cis d cis d e fis e fis d | %measure 64
   e d e fis g fis g e fis e fis g a g a fis |
-  g fis g a b a g fis g b a g a fis b a | %measure 66
+  g fis g a b a g fis g a b g a fis g a | %measure 66
   g a b g c b a g fis e d cis d fis e d |
   e d e fis g a b g a g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis g64-\2 fis e fis |
   r8 b,4 a8 b g a8 fis8 | %measure 69
   r8 b'4 a8 b g a4 |
   r8 c,4 b8 c a-\3 b4 |
-  r8 c'4 b8 c a <b e,>4 |
-  r8 b8. b16 a8~ a16 b g8 fis d | %measure 73
+  r8 c'4 b8 c a b4 |
+  r8 b8. b16 a8. b16 g8 fis d | %measure 73
   a'8~ a16 g fis e d cis d e fis e fis d e8 |
   \time 6/8
   \tempo \markup {
@@ -225,13 +225,13 @@ lowerVoice = \relative c {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  s1 |
-  s1 |
-  s1 |
-  s1 |
-  s1 |
-  s1 | %measure 6
-  d2 g,4 d' | %measure 7
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 | %measure 6
+  d2 b4 d | %measure 7
   c4 b a c |
   <g d'>4 b a g |
   d'2 g, |
@@ -246,7 +246,7 @@ lowerVoice = \relative c {
   a8 b c4. c8 b4 |
   a2 g |
   d4. d8 e8 fis g4 |
-  a8 g fis4 g fis | %measure 22
+  a8 g fis4 g fis-\5 | %measure 22
   e1 |
   g,2 c2 |
   d4. c8 b4 a |
@@ -256,7 +256,7 @@ lowerVoice = \relative c {
   fis'2 g |
   d4. d8 e d e fis |
   g2 fis4 d | %measure 31
-  a'4.-\3 a8 g2 |
+  a'4.-\4 a8-\4 g2 |
   d'2-\3 c8 a c d |
   s1 |
   s2. g,,8 a |
@@ -300,7 +300,7 @@ lowerVoice = \relative c {
   g,2. d'4~ | %measure 73
   d8 d4. d4. cis8 | %...or a rest could be notated; r8 d4. d4. cis8; NOTE: If you look at lute tab closely, this d in bass seems to be between the top voice's 'a' and 'g' thus making me suspect this rhythm to be correct.
   d4 cis8 d4 b8 | %measure 75, where the 6/8 begins
-  b4 g'8 f4 g8 | %measure 76
+  b4 d8 c4 d8 | %measure 76
   g4 fis8 g4 e8 |
   e4 g8 f4 g8 |
   c,4 e8 e4. |
@@ -308,10 +308,10 @@ lowerVoice = \relative c {
   d4 a8 d4 a8 |
   d4 a8 b g d' |  %measure 82
   g,8 g' g g g g |
-  r8 g g g g g |
-  d8 d cis d d a |
+  r8 g, g g g g |
+  d'8 d cis d d a |
   d8 d a d d c |
-  b8 g d' b g d'-\6 |
+  b8 g d'-\6 b g d'-\6 |
   b8 g d'-\6 b g g | %measure 88
   c8 c c c c d |
   e8 e d e e fis |
@@ -319,7 +319,7 @@ lowerVoice = \relative c {
   g8 g a b b c |
   d8 d cis d d a |
   c8 c a d d c | %measure 94
-  b8 g b c g c |
+  b8 g b c-\6 g c-\6 |
   b8 b g g' g f |
   e8 e d c c b |
   e8 e d c c b |
@@ -336,20 +336,20 @@ middleVoice = \relative c' {
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  s1 | 
-  s1 |
-  s1 | 
-  d2 b4 d-\3 |
+  r1 | 
+  r1 |
+  r1 | 
+  d2-\3 b4 d-\3 |
   c b a2 |
   g4. b8-\4 a4 g~ | %measure 6; imitation begins
   g8 g fis4 g4 a~ |
   a8 g g4 <a-\4 e> s4 |
-  d g, a <d b> |
+  b8 c <d g,> e c4 <d b> |
   a8 g a4 g2 |
   s1 | %measure 11
   s1 |
   <d' g,>4. g8-\2 e fis <g-\2 d-\3>4~ |
-  g8 fis e4 <e-\3 %{c-\4%}>8. e16-\3 dis4-\3 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
+  g8 fis e4 <e-\3 c-\4>8. e16-\3 dis4-\3 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
   <e b>2 a,8 g <d'! g,>4 |
   <c g>8 g fis4 <d' g,>8. g16-\2 <fis c>8 e |
   <d b>2 <d-\3 a-\4>2 | %measure 17
@@ -363,7 +363,7 @@ middleVoice = \relative c' {
   d2-\3 s8 g4-\2 fis8~ |
   fis8 e4 d8~ d4 cis | %measure 26
   d4. c!8 b4 a8 g |
-  <a-\3 d>2-\3 g2 |
+  <a-\4 d-\3>2-\3 g2 |
   s1 | %measure 29; The Faber diverges here
   s1 | 
   s2 a2 | %measure 31
@@ -376,11 +376,11 @@ middleVoice = \relative c' {
   s1 |
   s2 <d b>8 g, <d' b> g, |  % measure 39
   <d' a>4 \tieUp <d a>4~ <d a>16 \tieDown c b a b d cis8 | % measure 40; this measure needs fixed
-  d2-\3 a2 |
-  s2 e'4 e | % measure 42
+  d2-\3 r8 a4. |
+  s2 <e' a,>4 <e a,> | % measure 42
   e4 <e b> a,2 |
   b8-\4 a-\4 b4-\4 <cis a>2 |
-  a2 b4 a-\4 |
+  a8 a a4 b4 a-\4 |
   s8 <b g> a <c fis,> b8 g <a d> fis | % measure 46
   s8 <d' g,>4 fis,8 <d' g,>4 r8 s8 |
   s8 <d g,>8 <a fis> c <b g>8 g a fis |
@@ -407,7 +407,7 @@ middleVoice = \relative c' {
   s8 g,4 fis8 g8 s4. | % measure 69
   s8 <d' g,>4 fis,8 <d' g,>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
   s8 a,4-\4 gis8 a4-\4~ a8 gis8 |
-  s8 <e' a,-\4>4 gis,8 <e' a,-\4>4 s4 |
+  s8 <e' a,-\4>4 gis,8 <e' a,-\4>4. gis8 |
   s8 <d g,>4 <d fis,> g,8 a4 | % measure 73
   s1 |
   a2. | % measure 75
@@ -433,7 +433,7 @@ middleVoice = \relative c' {
   s2. |
   s2. |
   s2. |
-  c8 c d e e d |
+  c8 c b e e d |
   e8 d e d e d |
   e8 d e d8. e16 c8 |
   s8 c b a b2
@@ -444,20 +444,31 @@ middleVoice = \relative c' {
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
       instrumentName = #"Guitar"
-      \mergeDifferentlyDottedOn
-      \mergeDifferentlyHeadedOn
+
+      
 %      \override StringNumber #'stencil = ##f
     } <<
       \global
-      \clef "treble_8"
+      \clef "treble"
 
       \context Voice = "upperVoice" \upperVoice
       \context Voice = "middleVoice" \middleVoice
-      \context Voice = "lowerVoice" \lowerVoice
+    
+      
       
     >>
 %%{
     % tabs are not completely developed
+    
+    \new Staff = "Guitar Bass" \with {
+    }
+      <<
+      \clef "bass"
+      
+      \context Voice = "lowerVoice" \lowerVoice
+      
+      >>
+    
     \new TabStaff = "Guitar tabs" \with {
       tablatureFormat = #fret-letter-tablature-format
       stringTunings = \stringTuning <g, c f a d' g'>
