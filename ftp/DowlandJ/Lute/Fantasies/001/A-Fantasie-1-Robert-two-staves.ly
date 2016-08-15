@@ -4,7 +4,7 @@
   title = "Fantasie VII"
   subtitle = "Arranged for Guitar"
   composer = "Dowland J."
-  piece = \markup { \circle 3 = "F#" and capo at 2nd or 3rd fret } % tune g down 1/2 step to f#, then capo at 3rd fret
+  piece = \markup { \circle 3 = "F#" and capo at 3rd or 2nd fret } % tune g down 1/2 step to f#, then capo at 3rd fret
   arranger = "Arranged for Guitar by Devin Ulibarri and Robert Wang"
   opus = ""
   style = ""
@@ -95,7 +95,7 @@ upperVoice = \relative c'' {
   g8 a fis4 g4. fis8 |
   e8. fis16 g8 fis16 g a8. b16 c8 b16 a | 
   b8. c16 d4 c4 b4 | %measure 6
-  <a d, a>4. a8 g d4 f8 | 
+  a4. a8 g d4 f8 | 
   e4 d c8. d16 e8 fis! |
   g2 fis8 e16 fis g4~ | 
   g4 fis g-\1 d | 
@@ -110,7 +110,7 @@ upperVoice = \relative c'' {
   s2 s4 r8 g8 | 
   a b c4~ c8 c8 b4 | 
   a2 g4 s4 | %measure 21
-  s4 r8 a b c d4~ |  %measure 22
+  r4 r8 a b c d4~ |  %measure 22
   d4 cis d4. c8 | 
   b a g a16 b c4. b8 | 
   <a fis>8 g-\2 a b16 c d4 c | 
@@ -133,13 +133,13 @@ upperVoice = \relative c'' {
   d8 b~ b16 c d8 c a c4 | %measure 42
   b4. c8~ c b a4 |
   gis8-\2 a-\2~ a16 a-\2 gis8-\2 r8 a a a | %measure 44
-  fis8. g16 a4 d,8 g8~ g8 fis | 
+  fis8. g16 a4 d,8 g8~ g16 g-\2 fis8 | 
   s1 | %measure 46
   r8 b a c b g a fis |
   s8 s4 s4. a,4 |
   r8 d'8 g,-\1 c b g a8 fis |
-  g2 s4 a, |
-  r8 e''8-\1 d-\1 c b a16 g a8 fis | %measure 51
+  g1 |
+  r8 e'8-\1 d-\1 c b a16 g a8 fis | %measure 51
   g2 s2 |
   r8 g a16 b c a b8 g a fis |
   g1 | 
@@ -216,7 +216,7 @@ upperVoice = \relative c'' {
 
 
 lowerVoice = \relative c {
-  \voiceThree
+  \voiceFour
   \slurDown
   \stemDown
   \tieDown
@@ -225,9 +225,9 @@ lowerVoice = \relative c {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  r1 |
-  r1 |
-  r1 |
+  s1 |
+  s1 |
+  s1 |
   r1 |
   r1 |
   r1 | %measure 6
@@ -235,17 +235,17 @@ lowerVoice = \relative c {
   c4 b a c |
   <g d'>4 b a g |
   d'2 g, |
-  s4 g' e g~ | %measure 11
+  r4 g' e g~ | %measure 11
   g4 fis e c |
   b4 g a b |
   c2 b |
   e4. d8 c4 b |
   a2 g4 a |
   b4. c8 d2 | %measure 17
-  g,2. g'4 | %measure 18
-  a8 b c4. c8 b4 |
-  a2 g |
-  d4. d8 e8 fis g4 |
+  g,1~ | %measure 18
+  g1~ |
+  g1 |
+  d'4. d8 e8 fis g4 |
   a8 g fis4 g fis-\5 | %measure 22
   e1 |
   g,2 c2 |
@@ -328,10 +328,121 @@ lowerVoice = \relative c {
   g2 <d' g,>2 |
 }
 
-middleVoice = \relative c' {
+upperMiddleVoice = \relative c' {
   \voiceTwo
   \set stringNumberOrientations = #'(down)
   \set fingeringOrientations = #'(down)
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+  \override TextSpanner.font-size = #-5
+  \override TextSpanner.dash-fraction = #0.3
+  \override TextSpanner.dash-period = #1
+  s1 | 
+  s1 |
+  s1 | 
+  s1 |
+  s1 |
+  s1 | %measure 6; imitation begins
+  <d a>2 s2 |
+  r1 |
+  b8 c d e c4 <d b> |
+  a8 g a4 g2 |
+  s1 | %measure 11
+  s1 |
+  d'4. g8-\2 e fis g4-\2~ |
+  g8 fis e4 e8.-\3 e16-\3 dis4-\3 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
+  e2 r4 d4 |
+  c2 d8. g16-\2 fis8 e |
+  d2 d2-\3 | %measure 17
+  r4 d e8 fis g4 |
+  fis4 e d2 |
+  s2 d4-\3 g-\2~ |
+  g8 g-\2 fis4 r2 | %measure 21
+  s2 d4 a8 d | %measure 22
+  e8-\3 fis g4-\2 g8.-\2 g16-\2 fis4 |
+  g4.-\2 fis8 e d e4 |
+  d2-\3 s8 g4-\2 fis8~ |
+  fis8 e4 d8~ d4 cis | %measure 26
+  d4. c!8 b4 a8 g |
+  <a-\4 d-\3>2-\3 g2 |
+  s1 | %measure 29; The Faber diverges here
+  s1 | 
+  s2 a2 | %measure 31
+  s1 |
+  s2 e'2 |
+  e4 d <e>4 <d>4 |
+  <c>2 g8 a b c | 
+  s1 | % measure 36
+  s1 |
+  s1 |
+  s1 |  % measure 39
+  s1 | % measure 40; this measure needs fixed
+  s1 |
+  s2 <e>4 <e> | % measure 42
+  e4 <e> a,2 |
+  s2 <cis>2 |
+  a8 a a4 b4 a-\4 |
+  r8 <b>8 a <c> b b4 <a>8 | % measure 46
+  s8 <d g,>4 fis,8 <d' g,>4 r8 s8 |
+  r8 <d>8 a <c> b g <a> fis |
+  s8 r4 fis'8 g4.-\2 fis8 |
+  s8 <d>8 <a> c b8 g a fis|
+  s2 d'4. s8 | % measure 51
+  s8 e d c b a16 g a8 fis |
+  s2 s8 fis4. %r8 g d4 | 
+  s8 g <a fis>16 b c a b8 g a fis |
+  s2 s2 | % measure 55
+  s8 g a16 b c d b8 g a fis |
+  s1 |
+  r8 g a16 b c a b8 g a fis |
+  r16 b g a b c d e d g, g a b c d e | % measure 59
+  s1 | 
+  s1 | % measure 61
+  s1 |
+  s1 |
+  s1 | % measure 64
+  s1 | 
+  s1 | % measure 66
+  s1 |
+  s1 |
+  s8 g,4 fis8 g8 s4. | % measure 69
+  s8 <d' g,>4 fis,8 <d' g,>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
+  s8 a,4-\4 gis8 a4-\4~ a8 gis8 |
+  s8 <e' a,-\4>4 gis,8 <e' a,-\4>4. gis8 |
+  s8 <d g,>4 <d fis,> g,8 a4 | % measure 73
+  s1 |
+  a2. | % measure 75
+  s2. | % measure 76
+  d2. |
+  s2. |
+  s2. |
+  s2. |
+  a4. a4. |
+  a4 c8 b4 a8 | % measure 82
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  c8 c b e e d |
+  e8 d e d e d |
+  e8 d e d8. e16 c8 |
+  s8 c b a b2
+}
+
+lowerMiddleVoice = \relative c' {
+  \voiceThree
+  \set stringNumberOrientations = #'(up)
+  \set fingeringOrientations = #'(up)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
@@ -344,48 +455,48 @@ middleVoice = \relative c' {
   g4. b8-\4 a4 g~ | %measure 6; imitation begins
   g8 g fis4 g4 a~ |
   a8 g g4 <a-\4 e> s4 |
-  b8 c <d g,> e c4 <d b> |
-  a8 g a4 g2 |
+  d,4 g s2 |
+  s1 |
   s1 | %measure 11
   s1 |
-  <d' g,>4. g8-\2 e fis <g-\2 d-\3>4~ |
-  g8 fis e4 <e-\3 c-\4>8. e16-\3 dis4-\3 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
-  <e b>2 a,8 g <d'! g,>4 |
-  <c g>8 g fis4 <d' g,>8. g16-\2 <fis c>8 e |
-  <d b>2 <d-\3 a-\4>2 | %measure 17
-  <b g>4 d e8 fis g4 |
-  fis4 e d2 |
-  s2 d4-\3 g-\2~ |
-  g8 g-\2 <fis d-\3>4 c4 b4 | %measure 21
-  d2 d4 a8 d | %measure 22
-  e8-\3 fis g4-\2 g8.-\2 g16-\2 fis4 |
-  g4.-\2 fis8 e d e4 |
-  d2-\3 s8 g4-\2 fis8~ |
-  fis8 e4 d8~ d4 cis | %measure 26
-  d4. c!8 b4 a8 g |
-  <a-\4 d-\3>2-\3 g2 |
+  g2 r4 d'4-\3 |
+  r2 c2-\4 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
+  b2 a8 g g4 |
+  g8 g fis4 g4 c4 |
+  b2 a2-\4 | %measure 17
+  <b g>2 s4 g4 |
+  a8 b c4. c8 b4 |
+  a2 g |
+  r4 <d'-\3>4 c4 b4 | %measure 21
+  d2 s2 | %measure 22
+  s1 |
+  s1 |
+  s1 |
+  s1 | %measure 26
+  s1 |
+  s1 |
   s1 | %measure 29; The Faber diverges here
   s1 | 
-  s2 a2 | %measure 31
+  s1 | %measure 31
   c4. c8 b8 a b c |
   s2 e2 |
-  e4 d <e c>4 <d b>4 |
-  <c a>2 g8 a b c | 
+  s2 c4 <b>4 |
+  <a>2 s2 | 
   s4 a4 d2 | % measure 36
   a2 s2 |
   s1 |
   s2 <d b>8 g, <d' b> g, |  % measure 39
   <d' a>4 \tieUp <d a>4~ <d a>16 \tieDown c b a b d cis8 | % measure 40; this measure needs fixed
   d2-\3 r8 a4. |
-  s2 <e' a,>4 <e a,> | % measure 42
-  e4 <e b> a,2 |
-  b8-\4 a-\4 b4-\4 <cis a>2 |
+  s2 <a-\4>4 <a-\4> | % measure 42
+  g4 <b> a2 |
+  b8-\4 a-\4 b4-\4 <a-\4>2 |
   a8 a a4 b4 a-\4 |
-  s8 <b g> a <c fis,> b8 g <a d> fis | % measure 46
+  r8 <g>4 <fis> g fis8 | % measure 46
   s8 <d' g,>4 fis,8 <d' g,>4 r8 s8 |
-  s8 <d g,>8 <a fis> c <b g>8 g a fis |
+  s8 <g,>8 <fis>4 <g>8 g4 fis8 |
   s8 r4 fis'8 g4.-\2 fis8 |
-  s8 <d g,>8 <a fis> c b8 g a fis|
+  s8 <g,>8 <fis>4. g4 fis8 |
   s2 d'4. s8 | % measure 51
   s8 e d c b a16 g a8 fis |
   s2 s8 fis4. %r8 g d4 | 
@@ -452,7 +563,7 @@ middleVoice = \relative c' {
       \clef "treble"
 
       \context Voice = "upperVoice" \upperVoice
-      \context Voice = "middleVoice" \middleVoice
+      \context Voice = "UpperMiddleVoice" \upperMiddleVoice
     
       
       
@@ -463,8 +574,10 @@ middleVoice = \relative c' {
     \new Staff = "Guitar Bass" \with {
     }
       <<
+      \global
       \clef "bass"
       
+      \context Voice = "lowerMiddleVoice" \lowerMiddleVoice
       \context Voice = "lowerVoice" \lowerVoice
       
       >>
@@ -478,7 +591,8 @@ middleVoice = \relative c' {
       \clef "tab"
       \global
       \context TabVoice = "upperVoice" \upperVoice
-      \context TabVoice = "middleVoice" \middleVoice
+      \context TabVoice = "upperMiddleVoice" \upperMiddleVoice
+      \context TabVoice = "lowerMiddleVoice" \lowerMiddleVoice
       \context TabVoice = "lowerVoice" \lowerVoice
     >>
 %}
