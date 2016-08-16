@@ -519,7 +519,7 @@ lowerMiddleVoice = \relative c' {
   r8 g4 fis8 g8 s4. | % measure 69
   r8 <g>4 fis8 <g>2 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
   r8 a4-\4 gis8 a4.-\4 gis8 |
-  r8 <a-\4>4 gis8 <a-\4>4. gis8 |
+  r8 <a-\4>4 gis8 <a-\4>2 |
   r8 <g>4 <fis> g8 a4 | % measure 73
   s1 |
   a2. | % measure 75
@@ -552,6 +552,7 @@ lowerMiddleVoice = \relative c' {
 }
 
 \score {
+
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
