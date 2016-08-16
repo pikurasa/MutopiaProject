@@ -105,7 +105,7 @@ upperVoice = \relative c'' {
   b a <b fis-\2>4. b8~ |
   b4 g a b | 
   c4. c8 b4 a~ | 
-  a8 g g4~ g16 g-\2 fis e fis g-\2 a,-\4 fis' | %measure  17
+  a8 g g4~ g16 g-\2 fis e fis g-\2 a,-\4 fis' | %measure  17; I am keeping the a in top line to keep the rhythm easy to read
   g2 s2 | 
   s2 s4 r8 g8 | 
   a b c4~ c8 c8 b4 | 
@@ -128,7 +128,7 @@ upperVoice = \relative c'' {
   fis8 a~ a16 e a8~ a16 fis a8~ a16 g fis e |  %measure 37
   fis16 e d cis d e fis d e d e fis g a b g | 
   a16 g-\2 fis e g32-\2 fis g-\2 fis g-\2 fis e fis g2 | %measure 39
-  s2 r8 g g g |
+  r2 r8 g g g |
   fis8 d8. e16 fis8 r e' e e |  %measure 41
   d8 b~ b16 c d8 c a c4 | %measure 42
   b4. c8~ c b a4 |
@@ -136,7 +136,7 @@ upperVoice = \relative c'' {
   fis8. g16 a4 d,8 g8~ g16 g-\2 fis8 | 
   s1 | %measure 46
   r8 b a c b g a fis |
-  s8 s4 s4. a,4 |
+  s1 |
   r8 d'8 g,-\1 c b g a8 fis |
   g1 |
   r8 e'8-\1 d-\1 c b a16 g a8 fis | %measure 51
@@ -147,10 +147,10 @@ upperVoice = \relative c'' {
   g1 | 
   r8 g a16 b c a b8 g a fis | %Original Tab: r8 g a16 b c b b8 g a fis |
   g1 | 
-  r16 <g d>8.~ g4 s2 | %measure 59
-  fis16 d d e fis g a b a fis d e fis g a b |
+  r16 <g>8.~ g2. | %measure 59
+  fis16 d d e fis g a b a d, d e fis g a b |
   c c, c d e e e fis g c, c d e fis g a | %measure 61
-  b a g fis g a b a b g a b g fis g a |
+  b a g fis g a b a b g a b a fis g a |
   g fis g a b a b g a g a b a g fis e |
   fis e fis g fis e d cis d cis d e fis e fis d | %measure 64
   e d e fis g fis g e fis e fis g a g a fis |
@@ -160,7 +160,7 @@ upperVoice = \relative c'' {
   r8 b,4 a8 b g a8 fis8 | %measure 69
   r8 b'4 a8 b g a4 |
   r8 c,4 b8 c a-\3 b4 |
-  r8 c'4 b8 c a b4 |
+  r8 c'4 b8 c a b gis-\2 |
   r8 b8. b16 a8. b16 g8 fis d | %measure 73
   a'8~ a16 g fis e d cis d e fis e fis d e8 |
   \time 6/8
@@ -197,10 +197,11 @@ upperVoice = \relative c'' {
   g2. |
   g8 g f e e d | 
   g8 g4~ g4. |
-  g2. |
+  g2.~ |
+  
   \tempo \markup {
   }
-  s4. s4. | %measure 100
+  g2. | %measure 100
    \time 2/2
   \tempo \markup {
     \concat {
@@ -211,7 +212,7 @@ upperVoice = \relative c'' {
       )
     }
   }
-  r8 <d g g,>4. <d g g,>2 \bar "|."
+  r8 <g>4. <g>2 \bar "|."
 }
 
 
@@ -247,7 +248,7 @@ lowerVoice = \relative c {
   g1 |
   d'4. d8 e8 fis g4 |
   a8 g fis4 g fis-\5 | %measure 22
-  e1 |
+  e2 d2-\6 |
   g,2 c2 |
   d4. c8 b4 a |
   g4 fis' e2 | %measure 26
@@ -269,7 +270,7 @@ lowerVoice = \relative c {
   b4 g a2 |
   g'8 e4. f4. f8 | %measure 43
   e4 e <a, e'>2 | %measure 44
-  s8 d d d b8. c16 d4 |
+  r8 d d d b8. c16 d4 |
   g,2 g4 d'4 |
   g,2. d'4 | %measure 47
   g,2. d'4 | 
@@ -297,8 +298,8 @@ lowerVoice = \relative c {
   g,2. d'4 |
   g,2. e'4 |
   a,2. e'4 |
-  g,2. d'4~ | %measure 73
-  d8 d4. d4. cis8 | %...or a rest could be notated; r8 d4. d4. cis8; NOTE: If you look at lute tab closely, this d in bass seems to be between the top voice's 'a' and 'g' thus making me suspect this rhythm to be correct.
+  g,2. d'4 | %measure 73
+  r8 d4. d4. cis8 | %...or a rest could be notated; r8 d4. d4. cis8; NOTE: If you look at lute tab closely, this d in bass seems to be between the top voice's 'a' and 'g' thus making me suspect this rhythm to be correct.
   d4 cis8 d4 b8 | %measure 75, where the 6/8 begins
   b4 d8 c4 d8 | %measure 76
   g4 fis8 g4 e8 |
@@ -381,20 +382,20 @@ upperMiddleVoice = \relative c' {
   e4 <e> a,2 |
   s2 <cis>2 |
   a8 a a4 b4 a-\4 |
-  r8 <b>8 a <c> b b4 <a>8 | % measure 46
+  r8 <b>8 a <c> b8 g a4 | % measure 46
   s8 <d g,>4 fis,8 <d' g,>4 r8 s8 |
   r8 <d>8 a <c> b g <a> fis |
   s8 r4 fis'8 g4.-\2 fis8 |
-  s8 <d>8 <a> c b8 g a fis|
+  r8 <d>8 <a> c b8 g a fis|
   s2 d'4. s8 | % measure 51
-  s8 e d c b a16 g a8 fis |
-  s2 s8 fis4. %r8 g d4 | 
-  s8 g <a fis>16 b c a b8 g a fis |
-  s2 s2 | % measure 55
-  s8 g a16 b c d b8 g a fis |
   s1 |
-  r8 g a16 b c a b8 g a fis |
-  r16 b g a b c d e d g, g a b c d e | % measure 59
+  s1 | 
+  r8 g, <a>16 b c a b8 g a fis |
+  s2 s2 | % measure 55
+  s1 |
+  s1 |
+  s1 |
+  r16 <b d> g a b c d e d g, g a b c d e | % measure 59
   s1 | 
   s1 | % measure 61
   s1 |
@@ -404,24 +405,20 @@ upperMiddleVoice = \relative c' {
   s1 | % measure 66
   s1 |
   s1 |
-  s8 g,4 fis8 g8 s4. | % measure 69
-  s8 <d' g,>4 fis,8 <d' g,>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
-  s8 a,4-\4 gis8 a4-\4~ a8 gis8 |
-  s8 <e' a,-\4>4 gis,8 <e' a,-\4>4. gis8 |
-  s8 <d g,>4 <d fis,> g,8 a4 | % measure 73
+  s1 | % measure 69
+  r8 <d>4. <d>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
   s1 |
-  a2. | % measure 75
+  r8 <e>4. <e>2 |
+  r8 <d>4 <d> s4. | % measure 73
+  s1 |
+  s2. | % measure 75
   s2. | % measure 76
-  d2. |
-  s2. |
-  s2. |
-  s2. |
-  a4. a4. |
-  a4 c8 b4 a8 | % measure 82
   s2. |
   s2. |
   s2. |
   s2. |
+  s2. |
+  s2. | % measure 82
   s2. |
   s2. |
   s2. |
@@ -433,10 +430,14 @@ upperMiddleVoice = \relative c' {
   s2. |
   s2. |
   s2. |
-  c8 c b e e d |
-  e8 d e d e d |
-  e8 d e d8. e16 c8 |
-  s8 c b a b2
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. |
+  s2. | %measure 100
+  r8 <d g,>4. <d g,>2 |
 }
 
 lowerMiddleVoice = \relative c' {
@@ -481,7 +482,7 @@ lowerMiddleVoice = \relative c' {
   c4. c8 b8 a b c |
   s2 e2 |
   s2 c4 <b>4 |
-  <a>2 s2 | 
+  <a-\4>2 s2 | 
   s4 a4 d2 | % measure 36
   a2 s2 |
   s1 |
@@ -492,20 +493,20 @@ lowerMiddleVoice = \relative c' {
   g4 <b> a2 |
   b8-\4 a-\4 b4-\4 <a-\4>2 |
   a8 a a4 b4 a-\4 |
-  r8 <g>4 <fis> g fis8 | % measure 46
-  s8 <d' g,>4 fis,8 <d' g,>4 r8 s8 |
-  s8 <g,>8 <fis>4 <g>8 g4 fis8 |
-  s8 r4 fis'8 g4.-\2 fis8 |
-  s8 <g,>8 <fis>4. g4 fis8 |
-  s2 d'4. s8 | % measure 51
-  s8 e d c b a16 g a8 fis |
-  s2 s8 fis4. %r8 g d4 | 
-  s8 g <a fis>16 b c a b8 g a fis |
+  r8 <g>4 <fis> %{ \parenthesize %} g fis8 | % measure 46; it is not really feasible to play the two g notes, but the counterpoint is there
+  r8 <d' g,>4 fis,8 <d' g,>4 r8 s8 |
+  r8 <g,>8 <fis>4 <g>8 g4 fis8 |
+  r4 r8 fis'8 g4.-\2 fis8 |
+  r8 <g,>8 <fis>4. g4 fis8 |
+  r2 d'4. s8 | % measure 51
+  r8 e d c b a16 g a8 fis |
+  s1 | 
+  r8 <g>8 <fis>4. g4 fis8 |
   s2 s2 | % measure 55
-  s8 g a16 b c d b8 g a fis |
+  r8 g a16 b c d b8 g a fis |
   s1 |
   r8 g a16 b c a b8 g a fis |
-  r16 b g a b c d e d g, g a b c d e | % measure 59
+  s1 | % measure 59
   s1 | 
   s1 | % measure 61
   s1 |
@@ -515,11 +516,11 @@ lowerMiddleVoice = \relative c' {
   s1 | % measure 66
   s1 |
   s1 |
-  s8 g,4 fis8 g8 s4. | % measure 69
-  s8 <d' g,>4 fis,8 <d' g,>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
-  s8 a,4-\4 gis8 a4-\4~ a8 gis8 |
-  s8 <e' a,-\4>4 gis,8 <e' a,-\4>4. gis8 |
-  s8 <d g,>4 <d fis,> g,8 a4 | % measure 73
+  r8 g4 fis8 g8 s4. | % measure 69
+  r8 <g>4 fis8 <g>2 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
+  r8 a4-\4 gis8 a4.-\4 gis8 |
+  r8 <a-\4>4 gis8 <a-\4>4. gis8 |
+  r8 <g>4 <fis> g8 a4 | % measure 73
   s1 |
   a2. | % measure 75
   s2. | % measure 76
