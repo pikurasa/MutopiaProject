@@ -4,7 +4,7 @@
   title = "Fantasie VII"
   subtitle = "Arranged for Guitar"
   composer = "Dowland J."
-  piece = \markup { \circle 3 = "F#" and capo at 3rd or 2nd fret } % tune g down 1/2 step to f#, then capo at 3rd fret
+  piece = \markup { \circle 3 = F\raise #1.25 \teeny \sharp and capo at 3rd or 2nd fret } % tune g down 1/2 step to f#, then capo at 3rd fret
   arranger = "Arranged for Guitar by Devin Ulibarri and Robert Wang"
   opus = ""
   style = ""
@@ -12,7 +12,7 @@
   date = ""
   mutopiacomposer = "Dowland J."
   mutopiainstrument = "Guitar"
-  mutopiatitle = "I. A Fantasie"
+  mutopiatitle = "Fantasie VII by John Dowland"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Devin Ulibarri and Robert Wang"
   maintainerEmail = "research at devinulibarri.com"
@@ -29,11 +29,16 @@
   markup-markup-spacing #'padding = #1.2
   top-margin = #8
   bottom-margin = #12
+  system-system-spacing = #'((basic-distance . 0.1) (padding . 3))
+  % annotate-spacing = ##t
 }
 
 mbreak = {} % { \break }
 global = {
   \time 2/2
+  \set Timing.beamExceptions = #'() % first turn beam exceptions off
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
+  \set Timing.beatStructure = #'(1 1 1 1)
   \key g \major
 }
 
@@ -556,10 +561,8 @@ lowerMiddleVoice = \relative c' {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
-      instrumentName = #"Guitar"
-
-      
-%      \override StringNumber #'stencil = ##f
+      instrumentName = #"Guitar"     
+      \override StringNumber #'stencil = ##f
     } <<
       \global
       \clef "treble"
@@ -574,6 +577,8 @@ lowerMiddleVoice = \relative c' {
     % tabs are not completely developed
     
     \new Staff = "Guitar Bass" \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      \override StringNumber #'stencil = ##f
     }
       <<
       \global
