@@ -112,7 +112,7 @@ upperVoice = \relative c'' {
   c4. c8 b4 a~ | 
   a8 g g4~ g16 g-\2 fis e fis g-\2 a,-\4 fis' | %measure  17; I am keeping the a in top line to keep the rhythm easy to read
   g2 s2 | 
-  s2 s4 r8 g8 | 
+  r2 r4 r8 g8 | 
   a b c4~ c8 c8 b4 | 
   a2 g4 s4 | %measure 21
   r4 r8 a b c d4~ |  %measure 22
@@ -217,7 +217,7 @@ upperVoice = \relative c'' {
       )
     }
   }
-  r8 <g>4. <g>2 \bar "|."
+  r8 <g>4. <g>2 \fermata \bar "|."
 }
 
 
@@ -239,7 +239,7 @@ lowerVoice = \relative c {
   r1 | %measure 6
   d2 b4 d | %measure 7
   c4 b a c |
-  <g d'>4 b a g |
+  <g>4 b a g |
   d'2 g, |
   r4 g' e g~ | %measure 11
   g4 fis e c |
@@ -265,7 +265,7 @@ lowerVoice = \relative c {
   a'4.-\4 a8-\4 g2 |
   d'2-\3 c8 a c d |
   s1 |
-  s2. g,,8 a |
+  r2. g,,8 a |
   b8 c d e fis d e cis | %measure 36
   d4 cis d a |
   d4 b c e |
@@ -386,20 +386,20 @@ upperMiddleVoice = \relative c' {
   s2 <e>4 <e> | % measure 42
   e4 <e> a,2 |
   s2 <cis>2 |
-  a8 a a4 b4 a-\4 |
-  r8 <b>8 a <c> b8 g a4 | % measure 46
-  s8 <d g,>4 fis,8 <d' g,>4 r8 s8 |
-  r8 <d>8 a <c> b g <a> fis |
-  s8 r4 fis'8 g4.-\2 fis8 |
-  r8 <d>8 <a> c b8 g a fis|
+  s1 |
+  r8 <b>8 a <c> b8 \parenthesize g a \parenthesize fis | % measure 46
+  r8 <d'>4. <d>2 |
+  r8 <d>8 a <c> b \parenthesize g <a> \parenthesize fis |
+  r4 r8 fis'8 g4.-\2 fis8 |
+  r8 <d>8 <a> c b8 \parenthesize g a \parenthesize fis|
   s2 d'4. s8 | % measure 51
   s1 |
   s1 | 
-  r8 g, <a>16 b c a b8 g a fis |
-  s2 s2 | % measure 55
+  r8 g, <a>16 b c a b8 \parenthesize g a \parenthesize fis |
+  s1 | % measure 55
+  r8 g a16 b c d b8 \parenthesize g a \parenthesize fis |
   s1 |
-  s1 |
-  s1 |
+  r8 g a16 b c a b8 \parenthesize g a \parenthesize fis |
   r16 <b d> g a b c d e d g, g a b c d e | % measure 59
   s1 | 
   s1 | % measure 61
@@ -411,7 +411,7 @@ upperMiddleVoice = \relative c' {
   s1 |
   s1 |
   s1 | % measure 69
-  r8 <d>4. <d>4. fis8 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
+  r8 <d>4. <d>4. fis8 |
   s1 |
   r8 <e>4. <e>2 |
   r8 <d>4 <d> s4. | % measure 73
@@ -460,13 +460,13 @@ lowerMiddleVoice = \relative c' {
   c b a2 |
   g4. b8-\4 a4 g~ | %measure 6; imitation begins
   g8 g fis4 g4 a~ |
-  a8 g g4 <a-\4 e> s4 |
-  d,4 g s2 |
+  a8 g g4 <a-\4 e> r4 |
+  d,4 g r2 |
   s1 |
   s1 | %measure 11
   s1 |
   g2 r4 d'4-\3 |
-  r2 c2-\4 | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
+  r2 b2-\4^ \markup \tiny { c\raise #1.25 \teeny \natural "in original." } | %original tab from R. Dowland has a 'c' note on 4th string, but I cannot imagine this to be correct.
   b2 a8 g g4 |
   g8 g fis4 g4 c4 |
   b2 a2-\4 | %measure 17
@@ -485,32 +485,32 @@ lowerMiddleVoice = \relative c' {
   s1 | 
   s1 | %measure 31
   c4. c8 b8 a b c |
-  s2 e2 |
-  s2 c4 <b>4 |
-  <a-\4>2 s2 | 
-  s4 a4 d2 | % measure 36
-  a2 s2 |
+  r2 e2 |
+  r2 c4 <b>4 |
+  <a-\4>2 r2 | 
+  r4 a4 d2 | % measure 36
+  a1 |
   s1 |
-  s2 <d b>8 g, <d' b> g, |  % measure 39
+  r2 <d b>8 g, <d' b> g, |  % measure 39
   <d' a>4 \tieUp <d a>4~ <d a>16 \tieDown c b a b d cis8 | % measure 40; this measure needs fixed
   d2-\3 r8 a4. |
-  s2 <a-\4>4 <a-\4> | % measure 42
+  r2 <a-\4>4. <a-\4>8 | % measure 42
   g4 <b> a2 |
   b8-\4 a-\4 b4-\4 <a-\4>2 |
-  a8 a a4 b4 a-\4 |
+  a8 a a fis b4 a-\4 |
   r8 <g>4 <fis> %{ \parenthesize %} g fis8 | % measure 46; it is not really feasible to play the two g notes, but the counterpoint is there
-  r8 <d' g,>4 fis,8 <d' g,>4 r8 s8 |
-  r8 <g,>8 <fis>4 <g>8 g4 fis8 |
-  r4 r8 fis'8 g4.-\2 fis8 |
-  r8 <g,>8 <fis>4. g4 fis8 |
+  r8 <g>4 fis8 <g>2 |
+  r8 <g>8 <fis>4 <g>8 g4 fis8 |
+  s1 |
+  r8 <g>8 <fis>4. g4 fis8 |
   r2 d'4. s8 | % measure 51
   r8 e d c b a16 g a8 fis |
   s1 | 
-  r8 <g>8 <fis>4. g4 fis8 |
+  r8 \parenthesize <g>8 <fis>4. g4 fis8 |
   s2 s2 | % measure 55
-  r8 g a16 b c d b8 g a fis |
+  r8 \parenthesize <g>8 <fis>4. g4 fis8 |
   s1 |
-  r8 g a16 b c a b8 g a fis |
+  r8 \parenthesize <g>8 <fis>4. g4 fis8 |
   s1 | % measure 59
   s1 | 
   s1 | % measure 61
@@ -521,9 +521,9 @@ lowerMiddleVoice = \relative c' {
   s1 | % measure 66
   s1 |
   s1 |
-  r8 g4 fis8 g8 s4. | % measure 69
+  r8 g4 fis8 g8~ \parenthesize g4. | % measure 69
   r8 <g>4 fis8 <g>2 | % MY_NOTES: r8 g,~ g fis r8 d'4. |
-  r8 a4-\4 gis8 a4.-\4 gis8 |
+  r8 a4-\4 gis8 a8-\4~ a4 gis8 |
   r8 <a-\4>4 gis8 <a-\4>2 |
   r8 <g>4 <fis> g8 a4 | % measure 73
   s1 |
@@ -592,6 +592,7 @@ lowerMiddleVoice = \relative c' {
     \new TabStaff = "Guitar tabs" \with {
       tablatureFormat = #fret-letter-tablature-format
       stringTunings = \stringTuning <g, c f a d' g'>
+      \override ParenthesesItem #'stencil = ##f
      % additionalBassStrings = \stringTuning <c, d, e, fis, g,>
       fretLabels = #'("a" "b" "r" "d" "e" "f" "g" "h" "i" "k")
     } <<
