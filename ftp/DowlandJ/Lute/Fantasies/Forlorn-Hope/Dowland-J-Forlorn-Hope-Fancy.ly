@@ -143,8 +143,8 @@ lowerVoice = \relative c {
   d'4~ d16 c a8~ a16 bes c8~ c16 bes g8~ | 
   g16 a bes8~ bes a bes4 f' | %measure 10; This last note is octave lower in original: g16 a bes8~ bes a bes4 f
   g,8. a16 bes8 c-\6 d2 | 
-  d4 d g,2 |
- < fis' d>4 <f d> e ees | %all notes from fis to d (next measure) were originally one octave below
+  d4 d g2 |
+ < fis d>4 <f d> e ees | %all notes from fis to d (next measure) were originally one octave below
   d2 a8. bes16 c4-\6 | 
   g2 d'16 c d e f e f g | %measure 15
   <a-\4 a,>4 bes-\4 a-\4 a, | 
@@ -195,7 +195,7 @@ middleUpperVoice = \relative c' {
   g'8 fis f4 e ees-\3 |
   s s f s8 g16 f |
   e16 d e f e d d8 d cis16 b cis4 |
-  d r r2 |
+  d-\3 r r2 |
   r4 d cis c |
   b b e dis |
   e2 d4-\3 c |
@@ -239,7 +239,7 @@ middleLowerVoice = \relative c' {
   d8 g d8. e16 fis4 g8. a16-\4 |
   a-\4 g g8~ g fis g4 bes~ |
   bes8 a a4 r g |
-  <a-\4 d-\3> a a-\4 g8-\5 a-\5 |
+  <a-\4 d-\3> a a-\4 g8-\5 a-\5 | %fingering in this measure has been modified slightly from original.
   b16 a b c d c d e a,4-\4 a16 g a b |
   cis8 c d4-\3 e2 |
   s1 |
