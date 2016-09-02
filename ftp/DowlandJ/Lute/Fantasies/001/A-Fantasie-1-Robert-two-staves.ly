@@ -552,8 +552,8 @@ lowerMiddleVoice = \relative c' {
   s2. |
   c8 c b e e d |
   e8 d e d e d |
-  e8 d e d8. e16 c8 |
-  s8 c b a b2
+  e8 d e d8. e16 c8~ |
+  c8 c b a b2
 }
 
 \score {
