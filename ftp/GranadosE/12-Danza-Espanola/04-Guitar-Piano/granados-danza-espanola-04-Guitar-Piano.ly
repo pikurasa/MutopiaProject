@@ -89,7 +89,7 @@ upperVoice = \relative c'' {
   \override Fingering.add-stem-support = ##t
   \override StringNumber.add-stem-support = ##t
   \override StrokeFinger.add-stem-support = ##t
-  <d,-1 b-2>4 %{need to move this 2 up%} d'-4-\4 | <d, b> d' |
+  <d,-1-\3 b-0>4 %{need to move this 2 up%} d'-4-\4 | <d, b> d' |
   <d, b>4 d' | <d, b> d' \bar "||"
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
@@ -97,7 +97,7 @@ upperVoice = \relative c'' {
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
   s4 d-4 | s4 d-4 |
-  s4 f,4 | s4 f4 |
+  s4 f,4-1 | s4 f4 |
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
   s4 d4 | s4 g4 |
@@ -105,9 +105,9 @@ upperVoice = \relative c'' {
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
   s4 d4 | s4 g4 |
-  r2 | <c, e,>8 <b d,>16 <c e,> <a c,>4 |
-  r2 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  r2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  r2 | r2 |% <c, e,>8 <b d,>16 <c e,> <a c,>4 |
+  r2 | r2 |% <b d,>8 <a c,>16 <b d,> <g b,>4 |
+  r2 | r2 |% <c e,>8 <b d,>16 <c e,> <a c,>4 |
   r2 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
@@ -226,11 +226,11 @@ lowerVoice = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | 
   <g d'>2 | <g d'>2 |
   <g d'>4 r4 r4 d4 | %Andante espress.
   <g d'>2 | <g d'>2 | %this measure is a tempo
@@ -312,9 +312,9 @@ lowerVoice = \relative c {
 
 middleVoice = \relative c' {
   \voiceTwo
-  \set fingeringOrientations = #'(down)
-  \set stringNumberOrientations = #'(up down)
-  \set strokeFingerOrientations = #'(up down)
+  %\set fingeringOrientations = #'(down)
+  %\set stringNumberOrientations = #'(up)
+  %\set strokeFingerOrientations = #'(up)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
@@ -335,7 +335,7 @@ middleVoice = \relative c' {
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
   c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>8. d,16-3-\6 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>8. d,16-3-\6\glissando |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
   c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
@@ -412,8 +412,8 @@ middleVoice = \relative c' {
 
 pianoA = \relative c'' {
   \voiceOne
-  \set stringNumberOrientations = #'(down)
-  \set fingeringOrientations = #'(down)
+  %\set stringNumberOrientations = #'(down)
+  %\set fingeringOrientations = #'(down)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
@@ -536,8 +536,8 @@ pianoA = \relative c'' {
 
 pianoB = \relative c' {
   \voiceTwo
-  \set stringNumberOrientations = #'(down)
-  \set fingeringOrientations = #'(down)
+  %\set stringNumberOrientations = #'(down)
+  %\set fingeringOrientations = #'(down)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
@@ -579,8 +579,8 @@ pianoB = \relative c' {
 
 pianoC = \relative c {
   \voiceThree
-  \set stringNumberOrientations = #'(down)
-  \set fingeringOrientations = #'(down)
+  %\set stringNumberOrientations = #'(down)
+  %\set fingeringOrientations = #'(down)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.font-size = #-5
   \override TextSpanner.dash-fraction = #0.3
