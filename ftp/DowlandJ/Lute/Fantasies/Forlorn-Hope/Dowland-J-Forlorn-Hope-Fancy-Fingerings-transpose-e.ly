@@ -34,7 +34,7 @@
 mbreak = {} % { \break }
 global = {
   \time 4/4
-  \key g \minor
+  \key e \minor
 }
 
 %% C with slash -------------------------------
@@ -79,7 +79,193 @@ bbarre =
 
 #(define RH rightHandFinger)
 
-upperVoice = \relative c'' {
+upperVoice = \relative c' {
+  \voiceOne
+  \slurDown
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+  \override TextSpanner.dash-fraction = #0.3
+  \override TextSpanner.dash-period = #1
+  r1 |
+  r |
+  r |
+  r2 e |
+  dis4 d cis c |
+  b2 b8. cis16 d8 b |
+  d cis cis4 b'2 |
+  ais4-4 a-4 gis g |
+  <dis fis> d cis c |
+  b a8. c16 b4 g8 fis |
+  g4 r fis8 g4-1 a8-3 |
+  b4-0 r r2 |
+  r2 r4 e |
+  r4 b'4. ais8 a4 | 
+  <b, gis'> g' <b,-\3 fis'>4. r8 |
+  r fis'-1 e4-0 fis4. e8 |
+  dis4 r fis2 |
+  eis4 e fis cis8 b~ |
+  b cis cis4 fis2-4 |
+  eis4-1 e-0 dis d |
+  cis4. b8 a2 |
+  gis4 cis cis bis |
+  <eis, gis cis> gis' gis4. fisis8
+  <dis gis>4. fis8-\2 eis4 fis |
+  fis8-\2 eis16-\2 dis-\2 eis4-\2 fis4. e8 | 
+  dis8 cis dis4 e g-4-\2 |
+  fis4.-1 fis8 e4 b8. cis16 |
+  d4 e fis g |
+  s1 |
+  gis8 g fis a g e dis-3 d-3 |
+  cis c b4 a8 g fis8. fis'16 |
+  e4 fis8-3 fis e e dis32 cis b ais b cis dis e |
+  fis cis d e fis gis a fis gis fis gis ais b-4 b,-2 d-1 e-3 a fis-1 fis cis-1 dis e-\2 fis a g4 |
+  fis32-1 d-2 b-4 fis-1 a'-3 e-2-\2 c-4-\3 e-0 g-3 b,16-0 g'32-3 fis-3 d-4 b fis' e4 b32 cis-3 dis-4 e fis b, cis-2 dis-4 |
+  e4 c32-1 b-0 c b c b c b c b c b c8 r16 <b e>8. |
+  e1 |
+  \bar "|."
+}
+
+
+lowerVoice = \relative c {
+  \voiceFour
+  \slurDown
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+  \override TextSpanner.dash-fraction = #0.3
+  \override TextSpanner.dash-period = #1
+  \stemDown
+  e2 dis4 d | 
+  cis c b8 cis d b |
+  cis fis~ fis16 e cis dis e8 e,~ e16 fis g a | 
+  b a b cis d cis d b cis8 b-2 c4-2 |
+  b8 cis d e fis4.-\4 a,8 | %measure 5
+  e'4. e8 b2 |
+  ais4 a gis-2 g | 
+  fis8-1 gis-2 a-3-\6 b cis dis e e, |
+  b'4~ b16 a fis8~ fis16 g a8~ a16 g e8~ | 
+  e16 fis g8~ g fis g4 d' | %measure 10; This last note is octave lower in original: g16 a bes8~ bes a bes4 f
+  e,8. fis16 g8 a-\6 b2-2 | 
+  b4-2 b e2 |
+ < dis b>4 <d b> cis-4 c-2 | %all notes from fis to d (next measure) were originally one octave below
+  b2-1 fis8. g16 a4-\6 | 
+  e2 b'16 a b cis d cis d e | %measure 15
+  <fis-3-\4 fis,-1>4 g-2-\4 fis-\4 fis, | 
+  <b fis'-\4> b'-\3 ais a | 
+  gis g fis2-\4 |
+  eis4 e dis2-1 | 
+  cis2-4 b4 fis | %measure 20
+  fis eis fis2 | 
+  s2 <fis fis'-\4>4 <gis dis'> |
+  s8 cis4 s8 s2 | 
+  s1 |
+  cis4. b8 ais4 fis | %measure 25
+  b4. a8 g-3 fis-1 e4 |
+  b' b e16 dis e fis g e g a | 
+  b-\3 fis-\4 b32-\3 a g fis g16 e a32 g fis e dis16 b r8 r4 |
+  c16 a d32-\5 c b a g16 g'-\4 d e b32 a b cis d b d e fis16-\4 e32 d cis b cis dis | 
+  e16 d32 cis b a b cis d cis d e fis-\4 e fis-\4 d e dis e fis g fis g a b16-4-\3 a32 g fis e fis gis | %measure 30
+  a16 g32 fis e d e fis g16 fis32 e d cis d e fis-\4 e fis-\4 g-\4 fis-\4 e e16~ e32 e dis cis dis8 |
+  e4 dis8-1 d cis c b4 | 
+  s2 s4 e, |
+  b'8 a e16 e' b d c8-4 r16 e b4 |
+  r16 e32 fis gis e fis-\4 gis a-3 gis-2 a gis a gis a gis a gis a gis a a, c d e,4 | %measure 35
+  e1 |
+}
+
+middleUpperVoice = \relative c' {
+  \voiceTwo
+  \set stringNumberOrientations = #'(down)
+  \set fingeringOrientations = #'(down)
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+  \override TextSpanner.font-size = #-5
+  \override TextSpanner.dash-fraction = #0.3
+  \override TextSpanner.dash-period = #1
+  \slurUp
+  s1 |
+  r2 b2 |
+  ais4-4 a-2 gis-2 g |
+  fis4 b~ b4. a8-3 |
+  b4~ b16 b ais gis a8 gis a4 | %measure 5
+  a8 gis16 fis g4 fis8 b~ b a16 g! |
+  fis4 r4 r2 |
+  cis'2-1 e4 g,16 a b cis |
+  r8 b4-\3 ais a gis!8~ |
+  gis8 g a4~ a16 g g8 d4 |
+  s1 |
+  g8-1 g fis4 s2 |
+  s4 b4~ b8 ais-3 <a-3 e'-0>4~ |
+  e'8 dis-3 d4 cis c-\3 |
+  s s d s8 e16 d |
+  cis16-1 b-0 cis-1 d-2 cis-1 b b8 b ais16 gis ais4 |
+  b-\3 r r2 |
+  r4 b ais a |
+  gis gis cis-3 bis-2 |
+  cis2-2 b4-\3 a |
+  <fis a> gis fis8-\4 fis-\4 fis4-\4 |
+  fis8-\4 eis16 dis e4 a bis |
+  s2 cis4 cis |
+  cis-\3 bis-\3 <ais cis> <ais cis> |
+  gis cis-\3 cis2 |
+  b2 b4 b-1-\3 |
+  e16-4-\2 e-\2 dis cis dis4 r2 |
+  r2 b8 d32 c b a g16 e g32 fis e d |
+  a''4 b2 ais8 a |
+  s1 |
+  s1 |
+  s4 s8 b,32 cis d b cis b cis dis e8 s4 |
+  s1|
+  s2 s8 g,32 e g a s4 |
+  e32 fis gis a b gis a b r4 r4 s16 a gis fis |
+  <gis b>1 |
+}
+
+middleLowerVoice = \relative c {
+  \voiceThree
+  \set stringNumberOrientations = #'(down)
+  \set fingeringOrientations = #'(down)
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+  \override TextSpanner.font-size = #-5
+  \override TextSpanner.dash-fraction = #0.3
+  \override TextSpanner.dash-period = #1
+  \slurUp
+  s1 |
+  s1 |
+  s1 |
+  s2 s4 e8-1 fis-4 |
+  g8 fis16 e r4 r2 | %measure 5
+  r1 |
+  r4 fis4~ fis16 fis-0 eis dis-\5 e4 |
+  fis8-3-\4 e16-1 d cis8-2 dis e fis r4 |
+  s1 |
+  s4 d4. b8 a8. c16 |
+  b8 e b8. cis16 dis4-1 e8.-2 fis16-4-\4 |
+  fis-4-\4 e e8~ e dis e4 g~ |
+  g8 fis fis4 r e-1 |
+  <fis-2-\4 b-4-\3> fis fis-\4 e8-\5 fis-\5 | %fingering in this measure has been modified slightly from original.
+  gis16 fis gis a b a b cis fis,4-\4 fis16 e fis gis |
+  ais8-4 a-3 b4-3-\3 cis2 |
+  s1 |
+  s1 |
+  r2 fis,4. gis8-3 |
+  a4-3 ais-3 fis-\4 fis-\4 |
+  cis2 cis |
+  cis2 s |
+  r8 r4 b8 ais gis ais4 |
+  gis2 ais4 fis | 
+  r2 fis'4 ais |
+  fis2 e4 e8-3-\5 g-2-\4 |
+  <fis-2-\4 b-3-\3>2 r2 |
+  s1 |
+  s1 |
+  s1 |
+  s1 |
+  e32-2 g-1 fis-0 a-3 g-1 b-0 a-4 c-2 b-0 fis g a s4 e'32 e, g a fis4 |
+  ais,8 a gis g-1 fis b e32 fis g a b g e e'-\2 |
+  r2 e,32-2 dis e fis s8 g fis16 a-3 |
+  s2 s4 r16 e8. |
+  <b e>1 |
+}
+
+%%{ %This is the Lute Tab
+upperVoiceLute = \relative c'' {
   \voiceOne
   \slurDown
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
@@ -125,7 +311,7 @@ upperVoice = \relative c'' {
 }
 
 
-lowerVoice = \relative c {
+lowerVoiceLute = \relative c {
   \voiceFour
   \slurDown
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
@@ -170,7 +356,7 @@ lowerVoice = \relative c {
   g1 |
 }
 
-middleUpperVoice = \relative c' {
+middleUpperVoiceLute = \relative c' {
   \voiceTwo
   \set stringNumberOrientations = #'(down)
   \set fingeringOrientations = #'(down)
@@ -217,7 +403,7 @@ middleUpperVoice = \relative c' {
   <b d>1 |
 }
 
-middleLowerVoice = \relative c' {
+middleLowerVoiceLute = \relative c' {
   \voiceThree
   \set stringNumberOrientations = #'(down)
   \set fingeringOrientations = #'(down)
@@ -229,7 +415,7 @@ middleLowerVoice = \relative c' {
   s1 |
   s1 |
   s1 |
-  s2 s4 g8 a |
+  s2 s4 g8 a-\4 |
   bes8 a16 g r4 r2 | %measure 5
   r1 |
   r4 a4~ a16 a gis fis-\5 g4 |
@@ -263,6 +449,7 @@ middleLowerVoice = \relative c' {
   s2 s4 r16 g8. |
   <d g>1 |
 }
+%}
 
 \score {
   <<
@@ -288,7 +475,6 @@ middleLowerVoice = \relative c' {
     \new Staff = "Guitar Bass" \with {
     }
       <<
-      \global
       \clef "bass"
       
       \context Voice = "middleLowerVoice" \middleLowerVoice
@@ -304,10 +490,10 @@ middleLowerVoice = \relative c' {
     } <<
       \clef "tab"
       \global
-      \context TabVoice = "upperVoice" \upperVoice
-      \context TabVoice = "middleUpperVoice" \middleUpperVoice
-      \context TabVoice = "middleLowerVoice" \middleLowerVoice
-      \context TabVoice = "lowerVoice" \lowerVoice
+      \context TabVoice = "upperVoiceLute" \upperVoiceLute
+      \context TabVoice = "middleUpperVoiceLute" \middleUpperVoiceLute
+      \context TabVoice = "middleLowerVoiceLute" \middleLowerVoiceLute
+      \context TabVoice = "lowerVoiceLute" \lowerVoiceLute
     >>
 %}
   >>
