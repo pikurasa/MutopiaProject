@@ -94,16 +94,16 @@ upperVoice = \relative c'' {
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.3
   \override TextSpanner.dash-period = #1
-  d2 b4 d | %measure 1
-  c b a2 |
-  g4 b a g~ | 
-  g8 a fis4 g4. fis8 |
-  e8. fis16 g8 fis16 g a8. b16 c8 b16 a | 
-  b8. c16 d4 c4 b4-4 | %measure 6
-  a4. a8 g d4 f8 | 
-  e4 d c8. d16 e8 fis! |
-  g2 fis8 e16 fis g4~ | 
-  g4 fis g-\1 d | 
+  d2-4-\1 b4-1 d-4 | %measure 1
+  c-2 b-1\glissando a2-1 |
+  g4-0 b-4 a-1 g-0~ | 
+  g8 a fis4-3 g4. fis8 |
+  e8.-1 fis16-3 g8-0 fis16 g a8.-1 b16-3 c8-4 b16-4 a-2 | 
+  b8.-3 c16-4\glissando d4-4 c4-2 b4-4 | %measure 6
+  a4.-3 a8 g-0 d4 f8-3-\2 | 
+  e4-2 d-0 c8.-2 d16-0 e8-2 fis!-4 |
+  g2-0 fis8-4 e16 fis g4-0~ | 
+  g4 fis-4 g-0 d-0 | 
   b d c-3 b-1 | %measure 11
   a4.-0 b8-2 c-3 d e fis | 
   g a b g c4 b4~ |
@@ -237,10 +237,10 @@ lowerVoice = \relative c {
   r1 |
   r1 |
   r1 | %measure 6
-  d2 b4 d | %measure 7
-  c4 b a c |
-  <g>4 b a g |
-  d'2 g, |
+  d2-2 b4-3-\6 d-1-\5 | %measure 7
+  c4-0-\5 b-3 a-1 c |
+  <g>4-0 b-4 a-1 g-0 |
+  d'2-1-\5 g, |
   r4 g' e-4 g-2~ | %measure 11
   g4 fis-1 e-4 c-0 |
   b4 g a b |
@@ -350,8 +350,8 @@ upperMiddleVoice = \relative c' {
   s1 | %measure 6; imitation begins
   <d a>2 s2 |
   r1 |
-  b8 c d e c4 <d b> |
-  a8-1 g-2 a4 g2 |
+  b8-2 c-3 d-0 e-2 c4-3 <d-0 b-2> |
+  a8-0-\3 g-2 a4 g2 |
   s1 | %measure 11
   s1 |
   d'4. g8-\2 e fis g4-\2~ |
@@ -456,12 +456,12 @@ lowerMiddleVoice = \relative c' {
   r1 | 
   r1 |
   r1 | 
-  d2-\3 b4 d-\3 |
-  c b a2 |
-  g4. b8-\4 a4 g~ | %measure 6; imitation begins
-  g8 g fis4 g4 a~ |
-  a8 g g4 <a-\4 e> r4 |
-  d,4 g r2 |
+  d2-4-\3 b4-1 d-4 |
+  c-2 b-1 a2-0 |
+  g4.-1 b8-3-\4 a4-0-\3 g-1-\4~ | %measure 6; imitation begins
+  g8 g-1\glissando fis4-1 g4-1-\4 a~ |
+  a8 g-1 g4 <a-4-\4 e-3> r4 |
+  d,4-1 g-1 r2 |
   s1 |
   s1 | %measure 11
   s1 |
