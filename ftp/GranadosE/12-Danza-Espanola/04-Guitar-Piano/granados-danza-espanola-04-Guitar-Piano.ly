@@ -5,7 +5,7 @@
   subtitle = "Villanesca."
   composer = "Enrique Granados"
   piece = \markup { \circle 6 = D \circle 5 = G } % drop D and drop G tuning
-  arranger = "Arranged for Guitar by Devin Ulibarri"
+  arranger = "Arranged for Guitar and Piano by Devin Ulibarri"
   opus = ""
   style = "Based loosely on piano version from IMSLP -- TO BE FILLED IN"
   source = "Guitar Arrangement by Devin Ulibarri"
@@ -97,7 +97,7 @@ upperVoice = \relative c'' {
   s4 d4-4 | s4 d4-4 |
   s2 | s4 d-4 |
   s4 d-4 | s4 d-4 |
-  s4 f,4-1 | s4 f4 |
+  s4 f,4-1-\1 | s4 f4 |
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
   s4 d4 | s4 g4 |
@@ -105,9 +105,9 @@ upperVoice = \relative c'' {
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
   s4 d4 | s4 g4 |
-  r2 | r2 |% <c, e,>8 <b d,>16 <c e,> <a c,>4 |
-  r2 | r2 |% <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  r2 | r2 |% <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  r2 | <c, e,>8 <b d,>16 <c e,> <a c,>4 |
+  r2 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
+  r2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
   r2 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
@@ -124,9 +124,9 @@ upperVoice = \relative c'' {
   s2 | s2 |
   s2 | s2 |
   s2 | s2 | 
-  <d, a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  <d, a>16 b c d d'4 \harmonic | <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  <d a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  <d, a>16 b c d d'4 \harmonic | r2 | %<c e,>8 <b d,>16 <c e,> <a c,>4 |
+  <d, a>16 b c d d'4 \harmonic | r2 | %<b d,>8 <a c,>16 <b d,> <g b,>4 |
+  <d, a>16 b c d d'4 \harmonic | r2 | %<c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d, a>16 b c d d'4 \harmonic |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
@@ -226,11 +226,11 @@ lowerVoice = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | 
+  <g d'>2 | g4 g8 d8 | 
+  <g d'>2 | g4 g8 d8 |
+  <g d'>2 | g4 g8 d8 |
+  <g d'>2 | g4 g8 d8 |
+  <g d'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>4 r4 r4 d4 | %Andante espress.
   <g d'>2 | <g d'>2 | %this measure is a tempo
@@ -242,11 +242,11 @@ lowerVoice = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 | 
-  <g d'>2 | g4 g8 d8 | 
-  <g d'>2 | g4 g8 d8 |
-  <g d'>2 | g4 g8 d8 |
-  <g d'>2 | g4 g8 d8 |
-  <g d'>2 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | 
   <g d'>2 |
   <g d'>2 |
   <g d'>4 r4 r4 d4 | %Andante espress.
@@ -332,7 +332,7 @@ middleVoice = \relative c' {
   %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a <a c,>16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-3 fis-4 | \stemUp <g-4-\3 b,-0-\2>4 \stemNeutral r8. d,16-3-\6 |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
+  g8-0 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
   c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
   <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>8. d,16-3-\6\glissando |
@@ -351,11 +351,11 @@ middleVoice = \relative c' {
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  \stemUp b,4 b |
-  d4 b |
-  c4 c |
-  e4 c |
-  e4 e |
+  \stemUp b,4-1-\3 b |
+  d4-4-\3 b-1-\3 |
+  c4-3-\3 c |
+  e4-4-\2 c |
+  e4-3-\3 e |
   g4 fis |
   b4 b |
   d4 b | \stemNeutral
@@ -612,7 +612,7 @@ pianoC = \relative c {
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |  
   <g d'>2 | <g d'>2 |
-  <g e'>2 | <g e'>2 |
+  <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
   <g e'>2 | <g e'>2 |
