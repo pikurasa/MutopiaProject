@@ -105,10 +105,10 @@ upperVoice = \relative c'' {
   s4 e4 | s4 e4 |
   s4 a4 | s4 a4 |
   s4 d4 | s4 g4 |
-  r2 | <c, e,>8 <b d,>16 <c e,> <a c,>4 |
-  r2 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  r2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  r2 |
+  r4 d4 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  r4 d4 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
+  r4 d'4 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  r4 d4 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
   %{I have a note that this is where the piano takes over%}
@@ -275,7 +275,7 @@ lowerVoice = \relative c {
   <g d'>2 | <g d'>2 | %2nd melody
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
+  <g d'>2 | <g d'>2 | %How to just Ottava for top voice?
   <g d'>2 | <g d'>2 |
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
@@ -436,30 +436,30 @@ pianoA = \relative c'' {
   <c e,>8 c <c e,>16 d e fis | \acciaccatura fis <e g,>8 d16 e16 <c fis,>8. d16 |
   <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,>8 a16 b <g b,>4 |
   %guitar plays melody the first time
-  <d, a>16 b c d d'4 | r2 |
-  <d, a>16 b c d d'4 | r2 |
-  <d a>16 b c d d'4 | r2 |
-  <d, a>16 b c d d'4 |
+  <d, a>16 b c d r4 | r2 |
+  <d a>16 b c d r4 | r2 |
+  <d a>16 b c d r4 | r2 |
+  <d a>16 b c d r4 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> | %guitar and piano play together
   <a c,>8 <g b,>~ <g b,>4 |
   r4 r4 |
   r2 |
   r1 |
-  r2 | <g d b>2 |
-  <g d b>2 | <d b>4 r8. d,16 |
+  r2 | <g' d b>2 |
+  <g d b>2 | <d b>4 r8. d16 |
   g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
   a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
   fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 |
   g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
   a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
-  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. \ottava #1 d16 |  
-  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g4 \ottava #0 |
+  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. d16 |  
+  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g4 |
   <d a>2 |
-  r2 |
+  <c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d a>2 |
-  r2 |
+  <b d,>8 <a c,>16 <b d,> <g b,>4 |
   <d a>2 |
-  r2 |
+  <c' e,>8 <b d,>16 <c e,> <a c,>4 |
   <d a>2 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |  
