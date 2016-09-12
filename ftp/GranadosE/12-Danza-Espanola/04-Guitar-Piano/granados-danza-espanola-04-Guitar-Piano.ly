@@ -4,11 +4,11 @@
   title = "Danza Espanola No. 4"
   subtitle = "Villanesca."
   composer = "Enrique Granados"
-  piece = \markup { \circle 6 = D \circle 5 = G } % drop D and drop G tuning
+  piece = \markup { Guitar Tuning: \circle 6 = D \circle 5 = G } % drop D and drop G tuning
   arranger = "Arranged for Guitar and Piano by Devin Ulibarri"
   opus = ""
   style = "Based loosely on piano version from IMSLP -- TO BE FILLED IN"
-  source = "Guitar Arrangement by Devin Ulibarri"
+  source = \markup { \tiny \italic "Guitar Arrangement by Devin Ulibarri and Linda Papatopoli" } %how to make italic and small???
   date = ""
   mutopiacomposer = "Enrique Granados Arr. by Devin Ulibarri"
   mutopiainstrument = "Guitar"
@@ -133,10 +133,10 @@ upperVoice = \relative c'' {
   %{I have a note that this is where the piano takes over%}
   <d b>4 g'\harmonic | <d, b> g'\harmonic \bar "||"
   \time 4/4 <g b,, g d>4^\markup { \large "Andante espressivo." } fis16 e d c b4 <a fis c> \bar "||"
-  \time 2/4 <g d-1 b-2>4^\markup { \italic "a tempo" } %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
-  <g, d b>4 d'\harmonic | <g, d b> d'8.\harmonic d,16~ | %move harmonic to another voice
-  <d-1 bes-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <g, d bes> d'\harmonic |
-  <g, d bes>4 d'\harmonic | <g, d bes> d'\harmonic |
+  \time 2/4 <g d-1 b-2>4^\markup { \italic "a tempo" } %{need to move this 2 up%} d'-4-\4\harmonic | <d, b> d'\harmonic |
+  <d, b>4 d'\harmonic | <d, b> d'8.\harmonic d,16~ | %move harmonic to another voice
+  <d-1 bes-2>4 %{need to move this 2 up%} d'-4-\4\harmonic | <d, bes> d'\harmonic |
+  <d, bes>4 d'\harmonic | <d, bes> d'\harmonic |
   
   %{Cancion y estribillo%}
   \key g \minor
@@ -170,30 +170,30 @@ upperVoice = \relative c'' {
   s2 | s2 |
   s2 | s2 |
   s2 | s2 |
-  <d' a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  <d, a>16 b c d d'4 \harmonic | <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  <d a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  <d, a>16 b c d d'4 \harmonic |
+  r2 | r2 |
+  <d' a>16 b c d d'4 \harmonic | <b d,>8 <a c,>16 <b d,> <g b,>4 |
+  r2 | r2 |
+  <d a>16 b c d d'4 \harmonic |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
   <d b>4 g'\harmonic | <d, b> g'\harmonic \bar "||"
   \time 4/4 <g b,, g d>4^\markup { \large "Andante espressivo." } fis16 e d c b4 <a fis c> \bar "||"
   \time 2/4 <g d-1 b-2>4^\markup { \italic "a tempo" } %{need to move this 2 up%} d'-4-\4\harmonic | <g, d b> d'\harmonic |
   <g, d b>4 d'\harmonic | <g, d b> d'\harmonic \bar "||"
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
   <d, a>16 b c d d'4 \harmonic | r2 |
   <d, a>16 b c d d'4 \harmonic | r2 |
   <d, a>16 b c d d'4 \harmonic | r2 |
   <d, a>16 b c d d'4 \harmonic |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
-  r4 g'\harmonic | r4 g\harmonic \bar "||"
+  r2 | r2 | %{r4 g'\harmonic | r4 g\harmonic%} \bar "||"
   \time 4/4 r1 \bar "||"
   \time 2/4 r4 %{need to move this 2 up%} d-4-\4\harmonic | r4 d\harmonic |
   r4 d\harmonic | r4 d\harmonic |
@@ -281,14 +281,14 @@ lowerVoice = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
+  s2 | s2 |
   <g d'>2 | g4 g8 d8 |
-  <g d'>2 | g4 g8 d8 |
-  <g d'>2 | g4 g8 d8 |
+  s2 | s2 |
   <g d'>2 | g4 g8 d8 |
   <g d'>2 |
   <g d'>2 |
   <g d'>2 |
-  <g d'>4 r4 r4 d4 | %Andante espress.
+  <g d'>4 s2 d4 | %Andante espress.
   <g d'>2 | <g d'>2 | %this measure is a tempo
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 | %melody start for both guitar and piano
@@ -306,9 +306,9 @@ lowerVoice = \relative c {
   <g d'>2 |
   <g d'>2 |
   r1 | %Andante espress.
-  r2 | r2 | %this is 2/4 measure start
-  r2 | r2 |
-  r2 | r2 |
+  s2 | s2 | %this is 2/4 measure start
+  s2 | s2 |
+  s2 | s2 |
 }
 
 middleVoice = \relative c' {
@@ -393,15 +393,15 @@ middleVoice = \relative c' {
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
   <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4 \bar "||"
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r1 |
-  r2 | r2 |
-  r2 | r2 |
-  %{\stemUp%} <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s1 |
+  s2 | s2 |
+  s2 | s2 |
+  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando \bar "||"
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
@@ -428,10 +428,10 @@ pianoA = \relative c'' {
   r2 r2 |
   r2 r2 |
   r2 r2 |
-  r2 r2 |
-  r2 r2 |
-  r2 r2 |
-  r2 r4. r16 d, |
+  s2 s2 |
+  s2 s2 |
+  s2 s2 |
+  s2 s4. s16 d, |
   <g>4 <g>4 | <b>4 <g>8. e16 |%<g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,> a16 b <g b,>8. e16 |
   <a>4 <a>4 | <c>4 <a>8. g16 |
   <c>4 <c e,>4 | <e>4 <c>8. d16 |
@@ -494,31 +494,31 @@ pianoA = \relative c'' {
   %%{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8_\markup { \italic "poco a poco cresc." } g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
   %<a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
   %<fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d16-0 |
-  <d a>16 b c d d'4 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  <d, a>16 b c d d'4 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
-  <d a>16 b c d d'4 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
-  <d, a>16 b c d d'4 |
+  r4 s4 | r4 s4 |
+  r4 s4 | r4 s4 |
+  r4 s4 | r4 s4 |
+  r4 s4 | r4 s8. \stemDown d,16 |
+  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b g> a16 b <g b,>8. e16 |
+  <a c,>8 a <a c,>16 b c d | \acciaccatura d8 <c e,> b16 c <a c,>8. g16 |
+  <c a>8 c <c e,>16 d e fis | \acciaccatura fis <e g,>8 d16 e16 <c fis,>8. d16 |
+  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,>8 a16 b <g b,>4 |
+  <d a>16 b c d d'4 | <c e,>8 <b d,>16 <c e,> <a c,>4 | \stemNeutral
+  r2 | r2 |
+  <d, a>16 b c d d'4 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  r2 |
   <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
   r2 |
   r2 | r1 |
   r2 | r2 |
   r2 | r2 |
-  %{\stemUp%} <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
-  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
-  a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
-  c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4-0 |
+  b4 b | d4 b |
+  c4 c | e4 c |
+  c4 c | b4 s8. d,,16 |
+  g8 g <g>16 a b c | \acciaccatura c8 b a16 b <g>8. e16 |
+  a8 a <a>16 b c d | \acciaccatura d8 c b16 c <a>8. g16 |
+  c8 c <c>16 d e fis | \acciaccatura fis <e>8 d16 e16 <c>8. d16 |
+  <g>8 g <g>16 a b c | \acciaccatura c8 <b>8 a16 b <g>4 |
   <d a>2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d a>2 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
   <d' a>2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
@@ -527,9 +527,9 @@ pianoA = \relative c'' {
   <a c,>8 <g b,>~ <g b,>4 |
   <d b>4 g' | <d, b> g''~ |
   \time 4/4 <g b, g d>4^\markup { \large "Andante espressivo." } fis16 e d c b4 <a fis c> |
-  \time 2/4 <g d-1 b-2>4_\markup { \italic "rit. molto e dim." } %{need to move this 2 up%} r4 | <g d b> r4 |
-  <g d b>4 r4 | <g d b> r4 |
-  <g d b>2\pp | r2 |
+  \time 2/4 <g d-1 b-2>4_\markup { \italic "rit. molto e dim." } %{need to move this 2 up%} r4 | <d b> r4 |
+  <d b>4 r4 | <d b> r4 |
+  <d b>2\pp | r2 |
 }
 
 pianoB = \relative c' {
@@ -556,7 +556,7 @@ pianoB = \relative c' {
   e4 e |
   g4 fis |
   b4 b |
-  d4 b |
+  d4 b8. s16 |
   s2*19 |
   s1 | %measure 44
   s2*10 |
@@ -582,12 +582,20 @@ pianoB = \relative c' {
   bes16 c bes8~ bes bes d c~ c8. ces16 |
   f,8 g a d, ees4 d |
   c8 bes c4~_\markup { \italic "rit." } c8 a bes8. %{how to beam across bar?%} s16 |
-  r4 d''4 | r4 d4 |
+  r4 d''4 | r4 d4 | %1st melody, 1st time
   r4 d4 | r4 d4 |
   r4 d4 | r4 d4 |
+  \stemUp s4 d4 | s4 d4 | %1st melody, 2nd time
   s4 d4 | s4 d4 |
   s4 d4 | s4 d4 |
-  s4 d4 | s4 d4 |
+  s4 f,4 | s4 f4 | %2nd melody, 1st time
+  s4 e4 | s4 e4 |
+  s4 a4 | s4 a4 |
+  s4 d4 | s4 g4 |
+  s4 f,4 | s4 f4 | %2nd melody, 2nd time
+  s4 e4 | s4 e4 |
+  s4 a4 | s4 a4 |
+  s4 d4 | s4 g4 | \stemNeutral
 }
 
 pianoC = \relative c {
@@ -671,9 +679,9 @@ pianoC = \relative c {
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | g8 g16 d' g,8 d8 |
+  r2 | r2 |
   <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
+  r2 | r2 |
   <g d'>2 |
   <g d'>2 |
   <g d'>2 |
