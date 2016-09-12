@@ -156,20 +156,20 @@ upperVoice = \relative c'' {
   r1 | r1 |
   \time 2/4
   \key g \major
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
-  r2 | r2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
   <d' a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d, a>16 b c d d'4 \harmonic | <b d,>8 <a c,>16 <b d,> <g b,>4 |
   <d a>16 b c d d'4 \harmonic | <c e,>8 <b d,>16 <c e,> <a c,>4 |
@@ -267,12 +267,12 @@ lowerVoice = \relative c {
   r1 | r1 |
   r1 | r1 |
   r1 | r1 |
-  <g d'>2 | <g d'>2 | %1st melody
-  <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
-  <g d'>2 | <g d'>2 |
+  s2 | s2 | %1st melody
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
+  s2 | s2 |
   <g d'>2 | <g d'>2 | %2nd melody
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
@@ -298,9 +298,9 @@ lowerVoice = \relative c {
   <g e'>2 | <g e'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
-  <g d'>2 | g8 g16 d' g,8 d8 |
+  <g d'>2 | r2 | %g8 g16 d' g,8 d8 |
+  <g d'>2 | r2 | %g8 g16 d' g,8 d8 |
+  <g d'>2 | r2 | %g8 g16 d' g,8 d8 |
   <g d'>2 | g8 g16 d' g,8 d8 |
   <g d'>2 |
   <g d'>2 |
@@ -378,7 +378,7 @@ middleVoice = \relative c' {
   s1 | s1 |
   s1 | s1 |
   s1 | s1 |
-  s1 | s2 s4 s8. d,16 |  
+  s1 | s2 s4 g'8\harmonic\fermata s16 d,16 |  
   g8^\markup { \italic "a tempo" } g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
   a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
   fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 \bar "||"
@@ -387,9 +387,9 @@ middleVoice = \relative c' {
   fis8 fis \acciaccatura g8 fis16 d e fis \bar "||" \stemUp g4 \stemNeutral r8. d16 |
   g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
   a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
-  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. \ottava #1 d16 \bar "||"  
-  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g4 \ottava #0 |
-  g,8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
+  c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. \set Staff.ottavation = #"8va" \once \override Staff.OttavaBracket.direction = #UP \set Voice.middleCPosition = #(- 6 ) \ottava #1 d16 %I tried these instructions for ottava, but they do not work: http://lilypond.org/doc/v2.18/Documentation/snippets/tweaks-and-overrides
+  g8 g g16 a b c | \acciaccatura c8 b8 a16 b g8. \ottava #0 \unset Staff.ottavation \unset Voice.middleCPosition d,,16  \bar "||"
+  g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
   <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4 \bar "||"
@@ -432,9 +432,9 @@ pianoA = \relative c'' {
   r2 r2 |
   r2 r2 |
   r2 r4. r16 d, |
-  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,> a16 b <g b,>8. e16 |
-  <a c,>8 a <a c,>16 b c d | \acciaccatura d8 <c e,> b16 c <a c,>8. g16 |
-  <c e,>8 c <c e,>16 d e fis | \acciaccatura fis <e g,>8 d16 e16 <c fis,>8. d16 |
+  <g>4 <g>4 | <b>4 <g>8. e16 |%<g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,> a16 b <g b,>8. e16 |
+  <a>4 <a>4 | <c>4 <a>8. g16 |
+  <c>4 <c e,>4 | <e>4 <c>8. d16 |
   <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,>8 a16 b <g b,>4 |
   %guitar plays melody the first time
   <d, a>16 b c d r4 | r2 |
@@ -448,9 +448,9 @@ pianoA = \relative c'' {
   r1 |
   r2 | <g d b>2 |
   <g d b>2 | <d b>4 r8. d16 |
-  g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
-  a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
-  fis8 fis \acciaccatura g8 fis16 d e fis | \stemUp g4 \stemNeutral r8. d16 |
+  <g b,>8 g <g b,>16 a b c | \acciaccatura c8 <b d,> a16 b <g b,>8. e16 |
+  <a c,>8 a <a c,>16 b c d | \acciaccatura d8 <c e,> b16 c <a c,>8. g16 |
+  <fis c,>8 fis \acciaccatura g8 <fis c,>16 d e fis | <g b,>4 r8. d16 |
   g8 g g16 a b c | \acciaccatura c8 b a16 b g8. e16 |
   a8 a a16 b c d | \acciaccatura d8 c b16 c a8. g16 |
   c8 c c16 d e fis | \acciaccatura fis e8 d16 e16 c8. d16 |  
@@ -483,14 +483,17 @@ pianoA = \relative c'' {
   bes'16) a g8 f16 g f ees! d8 d bes c |
   d16 ees <d bes>8~ <d bes>8 <d bes> g4( f16) g f ces |
   bes8 c d g, a bes a g |
-  <a es> g fis16\trill e fis g g4 \fermata g'8 \fermata \bar "||"  r8 | \stemNeutral
-  \key g \major %{\stemUp%} %how to add another double bar here -- add d pickup?
-  <g,-4^\2 %{how to put fingering up? %} b,-2-\3>8 g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando \bar "||"
-  %{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8_\markup { \italic "poco a poco cresc." } g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
-  <a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
-  <fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
+  <a es> g fis16\trill e fis g g4 \fermata s8 \bar "||"  r8 | \stemNeutral
+  \key g \major
+  s2 | s2 |%<g b,>8 g <g b,>16 a b c | \acciaccatura<c>8 <b d,>8 a16 b <g b,>8. e16 |
+  s2 | s2 |%<a c,>8 a a16 b c\glissando d | \acciaccatura d8 <c e,>8 b16 c <a c,>8. g16 |
+  s2 | s2 |%<fis c>8 fis \acciaccatura g8 <fis c>16 d e fis | \stemUp <g b,>4 \stemNeutral r8. d16 \glissando \bar "||"
+  b4 b | d4 b |
+  c4 c | e4 c |
+  c4 c | b4 r |
+  %%{\stemUp%} <g-4^\2 %{how to put fingering up? %} b,-2-\3>8_\markup { \italic "poco a poco cresc." } g-1 %{\stemDown%} <g b,-2>16 a-3 b-1 c-2 | \acciaccatura<c>8 <b-1 d,-1>8 a16-4 b-1 <g-2 b,-3>8. e16-1 |
+  %<a c,>8 a a16-1 b-3 c-4\glissando d-4 | \acciaccatura d8-4 <c-1 e,-2>8 b16-1 c-1 <a-3 c,-2>8. g16-4 |
+  %<fis-3 c-1>8 fis-1 \acciaccatura g8-2 <fis-1 c-3>16 d-1 e-2 fis-1 | \stemUp <g-2 b,-3>4 \stemNeutral r8. d16-4 \glissando |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
@@ -515,18 +518,15 @@ pianoA = \relative c'' {
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16 |
   c8 c <c-1 e-1>16 d-2 e-4 fis-2 | \acciaccatura fis-2 <e-1 g,-0>8 d16-1 e16-0 <c-3 fis,-2>8. d16-3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>8. d,16-0 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-4 b-1 <g-1 b,-0>4-0 |
+  <d a>2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
+  <d a>2 | <b d,>8 <a c,>16 <b d,> <g b,>4 |
+  <d' a>2 | <c e,>8 <b d,>16 <c e,> <a c,>4 |
   <d a>2 |
-  r2 |
-  <d a>2 |
-  r2 |
-  <d a>2 |
-  r2 |
-  <d a>2 |
-  <b' d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
+  <b d,>8 <a c,>16 <b d,> <g b,>8 <b d,> |
   <a c,>8 <g b,>~ <g b,>4 |
-  <d b>4 g'\harmonic | <d, b> g'\harmonic |
-  \time 4/4 <g' b, g d>4^\markup { \large "Andante espressivo." } fis16 e d c b4 <a fis c> |
+  <d b>4 g' | <d, b> g''~ |
+  \time 4/4 <g b, g d>4^\markup { \large "Andante espressivo." } fis16 e d c b4 <a fis c> |
   \time 2/4 <g d-1 b-2>4_\markup { \italic "rit. molto e dim." } %{need to move this 2 up%} r4 | <g d b> r4 |
   <g d b>4 r4 | <g d b> r4 |
   <g d b>2\pp | r2 |
@@ -560,14 +560,14 @@ pianoB = \relative c' {
   s2*19 |
   s1 | %measure 44
   s2*10 |
-  s4 f'4 |
+  \stemUp s4 f'4 |
   s4 f4 |
   s4 e4 |
   s4 e4 |
   s4 a4 |
   s4 a4 |
   s4 d4 |
-  s4 g4 |
+  s4 g4 | \stemNeutral
   s2*11 |
   s1 | %measure 74
   s2*8 |
@@ -581,7 +581,13 @@ pianoB = \relative c' {
   c8_\markup { \italic "cresc." } bes a f bes a g f |
   bes16 c bes8~ bes bes d c~ c8. ces16 |
   f,8 g a d, ees4 d |
-  c8 bes c4~_\markup { \italic "rit." } c8 a bes8. %{how to beam across bar?%} d16 |
+  c8 bes c4~_\markup { \italic "rit." } c8 a bes8. %{how to beam across bar?%} s16 |
+  r4 d''4 | r4 d4 |
+  r4 d4 | r4 d4 |
+  r4 d4 | r4 d4 |
+  s4 d4 | s4 d4 |
+  s4 d4 | s4 d4 |
+  s4 d4 | s4 d4 |
 }
 
 pianoC = \relative c {
@@ -716,8 +722,8 @@ pianoC = \relative c {
       
     >>
 \new StaffGroup <<
-  \new Staff << \relative c'' \pianoA \\ \relative c' \pianoB >>
-  \new Staff \relative c' { \clef bass \pianoC }
+  \new Staff << \relative c'' \global \pianoA \\ \relative c' \pianoB >>
+  \new Staff \relative c' { \global \clef bass \pianoC }
 >>
 %{
     % tabs are not completely developed
