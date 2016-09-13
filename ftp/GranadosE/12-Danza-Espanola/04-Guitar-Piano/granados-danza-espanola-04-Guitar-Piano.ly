@@ -5,10 +5,10 @@
   subtitle = "Villanesca."
   composer = "Enrique Granados"
   piece = \markup { Guitar Tuning: \circle 6 = D \circle 5 = G } % drop D and drop G tuning
-  arranger = "Arranged for Guitar and Piano by Devin Ulibarri"
+  arranger = \markup { \small \italic "Guitar Arrangement by Devin Ulibarri and Linda Papatopoli" }
   opus = ""
   style = "Based loosely on piano version from IMSLP -- TO BE FILLED IN"
-  source = \markup { \tiny \italic "Guitar Arrangement by Devin Ulibarri and Linda Papatopoli" } %how to make italic and small???
+  source = ""
   date = ""
   mutopiacomposer = "Enrique Granados Arr. by Devin Ulibarri"
   mutopiainstrument = "Guitar"
@@ -233,7 +233,7 @@ lowerVoice = \relative c {
   <g d'>2 | g4 g8 d8 |
   <g d'>2 |
   <g d'>2 | <g d'>2 |
-  <g d'>4 r4 r4 d4 | %Andante espress.
+  <g d'>4 s4 s4 d4 | %Andante espress.
   <g d'>2 | <g d'>2 | %this measure is a tempo
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 | %melody start in piano
@@ -251,7 +251,7 @@ lowerVoice = \relative c {
   <g d'>2 |
   <g d'>2 |
   <g d'>4 s4 s4 d4 | %Andante espress.
-  <g d'>4 r4 | <g d'>2 | %this measure is a tempo
+  <g d'>4 s4 | <g d'>2 | %this measure is a tempo
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>2 |
   <g d'>2 | <g d'>4 s8. d''16 \bar "||" %this second bar needs to be moved to different voice
@@ -313,7 +313,7 @@ lowerVoice = \relative c {
 
 middleVoice = \relative c' {
   \voiceTwo
-  %\set fingeringOrientations = #'(down)
+  \set fingeringOrientations = #'(left)
   %\set stringNumberOrientations = #'(up)
   %\set strokeFingerOrientations = #'(up)
   \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
@@ -336,11 +336,11 @@ middleVoice = \relative c' {
   g8-0 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
   c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>8. d,16-3-\6\glissando |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 \once\set stringNumberOrientations = #'(right) <g-1-\3 b,-0-\2>8. d,16-3-\6\glissando |
   g8 g <g b>16 a b c | \acciaccatura c8-2 b-0-\2 a16 b <g b>8. e16 |
   a8 a <a c>16 b c d | \acciaccatura d8-4 c b16 c <a c>8. g16-0-\3 |
   c8-1-\3 c <c-1 e-1>16 d-3 e-1 fis-3 | \acciaccatura fis-3 <e-1 g,-0>8 d16-1-\2 e16-0 <c-3 fis,-2>8. d16-3-\3 |
-  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 <g-1-\3 b,-0-\2>4 |
+  <g-4 b,-1>8 g-1 <g-1 b,-2>16 a-3 b-1 c-2 | \acciaccatura c8-2 <b-1 d,-1>8 a16-3-\3 b-1-\2 \once\set stringNumberOrientations = #'(right) <g-1-\3 b,-0-\2>4 |
   s2 | s2 |
   s2 | s2 | %{need to edit stuff below here%}
   s2 | s2 |
@@ -476,14 +476,14 @@ pianoA = \relative c'' {
   r1 | r1 |
   r1 | r1 |
   r1 | r2 r4 d4( |
-\stemUp  g4) g16 a bes c bes8 a16 bes g8 a |
+  g4) g16 a bes c bes8 a16 bes g8 a |
   bes8 c c8 d32( c bes c d4) f,4( |
   bes4) bes16 c d ees d8 c16 d bes8 c |
   <d f,>8 <e g,> e8( fis32 e d e <fis d>4) d( |
   bes'16) a g8 f16 g f ees! d8 d bes c |
   d16 ees <d bes>8~ <d bes>8 <d bes> g4( f16) g f ces |
   bes8 c d g, a bes a g |
-  <a es> g fis16\trill e fis g g4 \fermata s8 \bar "||"  r8 | \stemNeutral
+  <a es> g fis16\trill e fis g g4 \fermata s8 \bar "||"  r8 | 
   \key g \major
   s2 | s2 |%<g b,>8 g <g b,>16 a b c | \acciaccatura<c>8 <b d,>8 a16 b <g b,>8. e16 |
   s2 | s2 |%<a c,>8 a a16 b c\glissando d | \acciaccatura d8 <c e,>8 b16 c <a c,>8. g16 |
@@ -573,15 +573,15 @@ pianoB = \relative c' {
   s2*8 |
   s1 | %measure 83
   s1*6 | 
-  s2. \slurDown d,,8( c | %measure 90
+  s2. \slurDown \stemDown d,,8( c | %measure 90
   <g' bes,>8) f <c es>8 <bes d> ees f d ees |
-  f8 a a bes32 a g a bes4 \slurDown f8( ees |
+  f8 a a bes32 a g a bes4 f8( ees |
   <bes' d,>8) \slurNeutral a <ees g>8 <d f> <bes g'> <c ees a> <d f> <c ees a> |
   f8 g cis d32 cis b cis fis,4 d'8 c~ |
   c8_\markup { \italic "cresc." } bes a f bes a g f |
   bes16 c bes8~ bes bes d c~ c8. ces16 |
   f,8 g a d, ees4 d |
-  c8 bes c4~_\markup { \italic "rit." } c8 a bes8. %{how to beam across bar?%} s16 |
+  c8 bes c4~_\markup { \italic "rit." } c8 a bes8. %{how to beam across bar?%} s16 | \stemNeutral
   r4 d''4 | r4 d4 | %1st melody, 1st time
   r4 d4 | r4 d4 |
   r4 d4 | r4 d4 |
@@ -660,7 +660,7 @@ pianoC = \relative c {
   <bes d>8( <f c'> <f c'>4 <bes, f'>) r |
   s1 |
   <bes' d>8 <a cis> <a cis g'>4 <d, a'> s4 |
-  s1 |
+  r1 |
   bes'8^\markup { \italic "poco dim." } a g f \slurUp <e bes' g'>4( <ees a f'>) | \slurNeutral
   <d aes>8 <ees g> <d fis> <bes g> <c g>4 <bes g> |
   c8 ees d,4 g,\fermata r4 | \stemNeutral
