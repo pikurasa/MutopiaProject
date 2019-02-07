@@ -56,7 +56,7 @@ upperVoice = \relative c' {
   b'8 a16 g fis8 e |
   d4 cis |
   d8 e16 fis g8 <g, cis> |
-  <fis d'>8 b\rest b4\rest |
+  <fis d'>8 b\rest b4\rest \bar "||"
 
   \mbreak
   <fis' a>8 \acciaccatura{b8} <fis a>16 <eis gis> <fis a>8 <g b> |
@@ -79,18 +79,18 @@ upperVoice = \relative c' {
   <c e>4 <b d>8 r |
   fis8 \slashedGrace{g8} fis16 e fis8[ \slashedGrace{<a, fis'>8} <c a'>8] |
   <b g'>4 r^\markup{\italic "Fine."} |
-  \bar "||" \key c \major
+  \bar "||" %{Original has the f# "cancelled out" with a natural %} \key c \major
   
-  \override TextSpanner.bound-details.left.text = \markup{\small\upright\smallCaps "IV "}
-  g'8.\startTextSpan a16 g4~ |
-  g8\stopTextSpan\noBeam c16 b \tuplet 3/2 { d8 c a } |
+  % I do not see this in original, but if included it should be III, not IV --> \override TextSpanner.bound-details.left.text = \markup{\small\upright\smallCaps "III "}
+  g'8. %{\startTextSpan %} a16 g4~ |
+  g8 %{\stopTextSpan\noBeam %} c16 b \tuplet 3/2 { d8 c a } |
 
   \mbreak
   g8. a16 g8 f! |
   f4 e8 r |
   e8 e16 f e8 <b d> |
   <a c>8 <gis b> a g %{ natural not indicated in original, but G natural is within the style's syntax while G sharp is not -- Devin U %} |
-  f8 a b4 |
+  f8^\markup {\tiny \sharp "*"} a b4 | % DU Note: It is possible that this first f is an f#; the next f is natural.
   c4. r8 |
   g'8. a16 g4^( |
 
@@ -100,7 +100,7 @@ upperVoice = \relative c' {
   f4 e8 r |
   e8 e16 f e8 <b d> |
   <a c>8 <gis b> a g %{ natural not indicated in original, but G natural is within the style's syntax while G sharp is not -- Devin U %} |
-  f8 a b4 |
+  f8^\markup {\tiny \sharp "*"} a b4 | % DU Note: It is possible that this first f is an f#; the next f is natural.
   c4. r8 |
 
   \bar "|."
@@ -192,10 +192,19 @@ lowerVoice = \relative c' {
       \context TabVoice = "lowerVoice" \lowerVoice
     >>
 %}
+
   >>
   \layout {}
   \midi {
     \context { \TabStaff \remove "Staff_performer" }
     \tempo 4 = 92
   }
+  
 }
+%{
+  \bookpart {
+    \markup {
+      "* Based on the harmonic progression, it is possible that these first f's may be intended to be sharp"
+    }
+    }
+%}
