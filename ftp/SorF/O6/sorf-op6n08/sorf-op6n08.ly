@@ -51,7 +51,7 @@ upperVoice = \fixed c' {
   \mbreak
   <fis, a,>4 <g, d> <g, e> |
   <g, b,>4 <a, c> <fis, a,> |
-  g4 f\rest f\rest |
+  g,4 f\rest f\rest |
   f4\rest g f |
   \acciaccatura{f4} e2 d4 |
   cis4 a g |
@@ -76,7 +76,7 @@ upperVoice = \fixed c' {
 
   \mbreak
   d4 a, <f, b,> |
-  <e, c>4 <a, d> <f, b> |
+  <e, c>4 <a, d> <f, b,> |
   <e, c>4 e\rest <c a~> |
   a4 g g~ |
   g4 f f~ |
@@ -104,7 +104,7 @@ lowerVoice = \fixed c {
 
   d8 c b,4 c |
   d2 d4 |
-  g,4 g f! |
+  <g, d>4 g f! |
   e2 d4 |
   c2 bes,4 |
   a,2 cis4 |
@@ -120,7 +120,7 @@ lowerVoice = \fixed c {
   g4 d\rest d\rest |
   e4 f g |
   a4 f d |
-  g2 b,4 |
+  g2 g,4 |
   <c c'>4 d\rest <d c'> |
   <g b>4 d\rest <c bes> |
   <f a>2 q4 |
