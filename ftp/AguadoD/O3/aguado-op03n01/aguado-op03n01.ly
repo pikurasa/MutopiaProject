@@ -173,7 +173,7 @@ middleVoice = \relative c, {
     s4. |
   }
   \repeat unfold 2 { b8\rest <bes g> q } |
-  b8\rest <g e>8 q |
+  b8\rest <a f>8 q |
   \barNumberCheck #25
   s4. |
   e8\rest <a f> q |
